@@ -29,11 +29,12 @@
 
 - (void)detectMuteSwitch {
 
+    if (_soundDuration != 0) return;
+    
     if (TARGET_IPHONE_SIMULATOR) {
         [NSException exceptionWithName:@"Simulator" reason:@"The simulator doesn't support detection" userInfo:nil];
     }else{
         
-        _soundDuration = 0.0;
         CFBundleRef mainBundle = CFBundleGetMainBundle();
 
         SystemSoundID	soundFileObject;
@@ -73,6 +74,7 @@ static void soundCompletionCallback (SystemSoundID mySSID, void* myself) {
     }
     [self.playbackTimer invalidate];
     self.playbackTimer = nil;
+    _soundDuration = 0.0;
 }
 
 @end
