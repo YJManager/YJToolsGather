@@ -20,26 +20,19 @@
     
     [MonitorMuteManager sharedInstance].delegate = self;
     
-    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [[MonitorMuteManager sharedInstance] detectMuteSwitch];
 }
 
-- (void)isMuted:(BOOL)muted{
+- (void)volumeModeMuted:(BOOL)muted{
 
     if (muted) {
-        NSLog(@"静音");
+        NSLog(@"静音模式");
     }else{
-        NSLog(@"响亮");
+        NSLog(@"响亮模式");
     }
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 

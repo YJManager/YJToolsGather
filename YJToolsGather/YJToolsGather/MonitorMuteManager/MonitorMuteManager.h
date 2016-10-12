@@ -11,7 +11,7 @@
 @protocol MonitorMuteManagerDelegate <NSObject>
 
 @optional
-- (void)isMuted:(BOOL)muted;
+- (void)volumeModeMuted:(BOOL)muted;
 
 @end
 
