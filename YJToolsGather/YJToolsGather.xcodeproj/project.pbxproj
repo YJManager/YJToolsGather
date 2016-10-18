@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630A4D141DB6732B00882307 /* SegmentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A4D131DB6732B00882307 /* SegmentationViewController.m */; };
+		630A4D181DB6737300882307 /* NSString+YJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A4D171DB6737300882307 /* NSString+YJTools.m */; };
 		63AC99DE1DADFF6A0089278D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC99DD1DADFF6A0089278D /* main.m */; };
 		63AC99E11DADFF6A0089278D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC99E01DADFF6A0089278D /* AppDelegate.m */; };
 		63AC99E71DADFF6A0089278D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AC99E51DADFF6A0089278D /* Main.storyboard */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630A4D121DB6732B00882307 /* SegmentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentationViewController.h; sourceTree = "<group>"; };
+		630A4D131DB6732B00882307 /* SegmentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentationViewController.m; sourceTree = "<group>"; };
+		630A4D161DB6737300882307 /* NSString+YJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YJTools.h"; sourceTree = "<group>"; };
+		630A4D171DB6737300882307 /* NSString+YJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YJTools.m"; sourceTree = "<group>"; };
 		63AC99D91DADFF6A0089278D /* YJToolsGather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJToolsGather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AC99DD1DADFF6A0089278D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63AC99DF1DADFF6A0089278D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,6 +52,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630A4D151DB6734A00882307 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				630A4D161DB6737300882307 /* NSString+YJTools.h */,
+				630A4D171DB6737300882307 /* NSString+YJTools.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		63AC99D01DADFF6A0089278D = {
 			isa = PBXGroup;
 			children = (
@@ -65,12 +80,15 @@
 		63AC99DB1DADFF6A0089278D /* YJToolsGather */ = {
 			isa = PBXGroup;
 			children = (
+				630A4D151DB6734A00882307 /* Category */,
 				63AC99F31DAE003E0089278D /* MonitorMuteManager */,
 				63AC99DF1DADFF6A0089278D /* AppDelegate.h */,
 				63AC99E01DADFF6A0089278D /* AppDelegate.m */,
 				63AC99FC1DAE2EE40089278D /* YJMainViewController.h */,
 				63AC99FD1DAE2EE40089278D /* YJMainViewController.m */,
 				63AC99FE1DAE2EE40089278D /* YJMainViewController.xib */,
+				630A4D121DB6732B00882307 /* SegmentationViewController.h */,
+				630A4D131DB6732B00882307 /* SegmentationViewController.m */,
 				63AC99DC1DADFF6A0089278D /* Supporting Files */,
 			);
 			path = YJToolsGather;
@@ -172,10 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630A4D181DB6737300882307 /* NSString+YJTools.m in Sources */,
 				63AC99E11DADFF6A0089278D /* AppDelegate.m in Sources */,
 				63AC99DE1DADFF6A0089278D /* main.m in Sources */,
 				63AC99FB1DAE01330089278D /* MonitorMuteManager.m in Sources */,
 				63AC99FF1DAE2EE40089278D /* YJMainViewController.m in Sources */,
+				630A4D141DB6732B00882307 /* SegmentationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
