@@ -10,10 +10,10 @@
 
 @implementation NSString (YJTools)
 
-- (NSArray<NSString *> *)segmentation:(PINSegmentationOptions)options {
+- (NSArray<NSString *> *)segment:(YJSegmentationOptions)options {
     
-    BOOL deduplication = options & PINSegmentationOptionsDeduplication;
-    BOOL keepSymbols = options & PINSegmentationOptionsKeepSymbols;
+    BOOL deduplication = options & YJSegmentationOptionsDeduplication;
+    BOOL keepSymbols = options & YJSegmentationOptionsKeepSymbols;
     CFOptionFlags flags = keepSymbols ? kCFStringTokenizerUnitWordBoundary : kCFStringTokenizerUnitWord;
     
     NSMutableArray<NSString *> *results = [NSMutableArray array];
@@ -53,6 +53,5 @@
     
     return results;
 }
-
 
 @end

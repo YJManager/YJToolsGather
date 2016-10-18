@@ -18,10 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray<NSString *> *texts = [@"测试中文分词功能" segmentation:PINSegmentationOptionsNone];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    NSArray<NSString *> * texts = [@"测试中文分词功能" segment:YJSegmentationOptionsNone];
     [texts enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSLog(@"%@", obj);
     }];
+
 }
 
 

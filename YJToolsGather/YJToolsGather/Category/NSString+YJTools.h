@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_OPTIONS(NSInteger, PINSegmentationOptions) {
-    PINSegmentationOptionsNone              = 0,
-    PINSegmentationOptionsDeduplication     = 1 << 0,
-    PINSegmentationOptionsKeepEnglish       = 1 << 1,
-    PINSegmentationOptionsKeepSymbols       = 1 << 2,
+typedef NS_OPTIONS(NSInteger, YJSegmentationOptions) {
+    YJSegmentationOptionsNone              = 0,
+    YJSegmentationOptionsDeduplication     = 1 << 0,
+    YJSegmentationOptionsKeepEnglish       = 1 << 1,
+    YJSegmentationOptionsKeepSymbols       = 1 << 2,
 };
 
 
 @interface NSString (YJTools)
 
-- (NSArray<NSString *> *)segmentation:(PINSegmentationOptions)options;
+- (NSArray<NSString *> *)segment:(YJSegmentationOptions)options;
 
 @end

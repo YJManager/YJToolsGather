@@ -8,6 +8,7 @@
 
 #import "YJMainViewController.h"
 #import "MonitorMuteManager.h"
+#import "SegmentationViewController.h"
 
 @interface YJMainViewController () <UITableViewDataSource, UITableViewDelegate, MonitorMuteManagerDelegate>
 
@@ -34,7 +35,7 @@
     
     self.tableView.tableFooterView = [UIView new];
     
-    NSArray * dataSource = @[@"查看手机是否静音"];
+    NSArray * dataSource = @[@"查看手机是否静音", @"测试中文分词功能"];
     
     self.dataSource = [NSMutableArray arrayWithArray:dataSource];
     
@@ -67,6 +68,9 @@
 
     if (indexPath.row == 0) { // 查看手机是否静音
         [[MonitorMuteManager sharedInstance] detectMuteSwitch];
+    }else if (indexPath.row == 1){
+        SegmentationViewController * seg = [[SegmentationViewController alloc] init];
+        [self.navigationController pushViewController:seg animated:YES];
     }
 }
 
