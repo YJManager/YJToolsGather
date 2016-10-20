@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		630A4D141DB6732B00882307 /* SegmentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A4D131DB6732B00882307 /* SegmentationViewController.m */; };
 		630A4D181DB6737300882307 /* NSString+YJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A4D171DB6737300882307 /* NSString+YJTools.m */; };
+		63668ED71DB873DA003646E2 /* NSObject+YJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 63668ED61DB873DA003646E2 /* NSObject+YJTools.m */; };
+		63668EDD1DB87432003646E2 /* ConvertTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63668EDC1DB87432003646E2 /* ConvertTypeViewController.m */; };
 		63AC99DE1DADFF6A0089278D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC99DD1DADFF6A0089278D /* main.m */; };
 		63AC99E11DADFF6A0089278D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC99E01DADFF6A0089278D /* AppDelegate.m */; };
 		63AC99E71DADFF6A0089278D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AC99E51DADFF6A0089278D /* Main.storyboard */; };
@@ -25,6 +27,10 @@
 		630A4D131DB6732B00882307 /* SegmentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentationViewController.m; sourceTree = "<group>"; };
 		630A4D161DB6737300882307 /* NSString+YJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YJTools.h"; sourceTree = "<group>"; };
 		630A4D171DB6737300882307 /* NSString+YJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YJTools.m"; sourceTree = "<group>"; };
+		63668ED51DB873DA003646E2 /* NSObject+YJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YJTools.h"; sourceTree = "<group>"; };
+		63668ED61DB873DA003646E2 /* NSObject+YJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YJTools.m"; sourceTree = "<group>"; };
+		63668EDB1DB87432003646E2 /* ConvertTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertTypeViewController.h; sourceTree = "<group>"; };
+		63668EDC1DB87432003646E2 /* ConvertTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvertTypeViewController.m; sourceTree = "<group>"; };
 		63AC99D91DADFF6A0089278D /* YJToolsGather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJToolsGather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AC99DD1DADFF6A0089278D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63AC99DF1DADFF6A0089278D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +63,8 @@
 			children = (
 				630A4D161DB6737300882307 /* NSString+YJTools.h */,
 				630A4D171DB6737300882307 /* NSString+YJTools.m */,
+				63668ED51DB873DA003646E2 /* NSObject+YJTools.h */,
+				63668ED61DB873DA003646E2 /* NSObject+YJTools.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -89,6 +97,8 @@
 				63AC99FE1DAE2EE40089278D /* YJMainViewController.xib */,
 				630A4D121DB6732B00882307 /* SegmentationViewController.h */,
 				630A4D131DB6732B00882307 /* SegmentationViewController.m */,
+				63668EDB1DB87432003646E2 /* ConvertTypeViewController.h */,
+				63668EDC1DB87432003646E2 /* ConvertTypeViewController.m */,
 				63AC99DC1DADFF6A0089278D /* Supporting Files */,
 			);
 			path = YJToolsGather;
@@ -193,7 +203,9 @@
 				630A4D181DB6737300882307 /* NSString+YJTools.m in Sources */,
 				63AC99E11DADFF6A0089278D /* AppDelegate.m in Sources */,
 				63AC99DE1DADFF6A0089278D /* main.m in Sources */,
+				63668ED71DB873DA003646E2 /* NSObject+YJTools.m in Sources */,
 				63AC99FB1DAE01330089278D /* MonitorMuteManager.m in Sources */,
+				63668EDD1DB87432003646E2 /* ConvertTypeViewController.m in Sources */,
 				63AC99FF1DAE2EE40089278D /* YJMainViewController.m in Sources */,
 				630A4D141DB6732B00882307 /* SegmentationViewController.m in Sources */,
 			);

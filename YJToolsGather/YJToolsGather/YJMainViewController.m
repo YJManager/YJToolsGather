@@ -9,6 +9,7 @@
 #import "YJMainViewController.h"
 #import "MonitorMuteManager.h"
 #import "SegmentationViewController.h"
+#import "ConvertTypeViewController.h"
 
 @interface YJMainViewController () <UITableViewDataSource, UITableViewDelegate, MonitorMuteManagerDelegate>
 
@@ -35,7 +36,7 @@
     
     self.tableView.tableFooterView = [UIView new];
     
-    NSArray * dataSource = @[@"查看手机是否静音", @"测试中文分词功能"];
+    NSArray * dataSource = @[@"查看手机是否静音", @"测试中文分词功能", @"类型转换"];
     
     self.dataSource = [NSMutableArray arrayWithArray:dataSource];
     
@@ -66,12 +67,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
+    UIViewController * pushVc = nil;
     if (indexPath.row == 0) { // 查看手机是否静音
         [[MonitorMuteManager sharedInstance] detectMuteSwitch];
     }else if (indexPath.row == 1){
         SegmentationViewController * seg = [[SegmentationViewController alloc] init];
-        [self.navigationController pushViewController:seg animated:YES];
+        pushVc = seg;
+    }else if (indexPath.row == 2){
+        
+        ConvertTypeViewController * convert = [[ConvertTypeViewController alloc] init];
+        pushVc = convert;
     }
+    [self.navigationController pushViewController:pushVc animated:YES];
 }
 
 #pragma mark - MonitorMuteManagerDelegate
