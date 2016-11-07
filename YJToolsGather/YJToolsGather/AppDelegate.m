@@ -9,7 +9,11 @@
 #import "AppDelegate.h"
 #import "YJMainViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate (){
+
+    dispatch_queue_t  _queue;
+
+}
 
 @end
 
@@ -26,6 +30,12 @@
     self.window.rootViewController = mainNav;
     
     [self.window makeKeyAndVisible];
+    
+    _queue = dispatch_queue_create([[NSString stringWithFormat:@"houmanager.%@", self] UTF8String], NULL);
+    
+    NSLog(@"_queue = %@", _queue);
+
+
     
     return YES;
 }
