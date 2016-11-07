@@ -10,6 +10,7 @@
 #import "MonitorMuteManager.h"
 #import "SegmentationViewController.h"
 #import "ConvertTypeViewController.h"
+#import "PlaySoundAndShockViewController.h"
 
 @interface YJMainViewController () <UITableViewDataSource, UITableViewDelegate, MonitorMuteManagerDelegate>
 
@@ -36,7 +37,7 @@
     
     self.tableView.tableFooterView = [UIView new];
     
-    NSArray * dataSource = @[@"查看手机是否静音", @"测试中文分词功能", @"类型转换"];
+    NSArray * dataSource = @[@"查看手机是否静音", @"测试中文分词功能", @"类型转换", @"播放声音和震动"];
     
     self.dataSource = [NSMutableArray arrayWithArray:dataSource];
     
@@ -76,6 +77,9 @@
     }else if (indexPath.row == 2){
         
         ConvertTypeViewController * convert = [[ConvertTypeViewController alloc] init];
+        pushVc = convert;
+    }else if (indexPath.row == 3){
+        PlaySoundAndShockViewController * convert = [[PlaySoundAndShockViewController alloc] init];
         pushVc = convert;
     }
     [self.navigationController pushViewController:pushVc animated:YES];

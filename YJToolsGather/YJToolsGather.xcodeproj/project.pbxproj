@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		630A4D141DB6732B00882307 /* SegmentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A4D131DB6732B00882307 /* SegmentationViewController.m */; };
 		630A4D181DB6737300882307 /* NSString+YJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A4D171DB6737300882307 /* NSString+YJTools.m */; };
+		633667E01DD08F8200307E31 /* PlaySoundAndShocking.m in Sources */ = {isa = PBXBuildFile; fileRef = 633667DF1DD08F8200307E31 /* PlaySoundAndShocking.m */; };
+		633667E51DD0921F00307E31 /* soundSucceed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 633667E31DD0921F00307E31 /* soundSucceed.wav */; };
+		633667E61DD0921F00307E31 /* Taito_Carousel.wav in Resources */ = {isa = PBXBuildFile; fileRef = 633667E41DD0921F00307E31 /* Taito_Carousel.wav */; };
+		633667E91DD092A100307E31 /* PlaySoundAndShockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 633667E81DD092A100307E31 /* PlaySoundAndShockViewController.m */; };
 		63668ED71DB873DA003646E2 /* NSObject+YJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 63668ED61DB873DA003646E2 /* NSObject+YJTools.m */; };
 		63668EDD1DB87432003646E2 /* ConvertTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63668EDC1DB87432003646E2 /* ConvertTypeViewController.m */; };
 		63AC99DE1DADFF6A0089278D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC99DD1DADFF6A0089278D /* main.m */; };
@@ -27,6 +31,12 @@
 		630A4D131DB6732B00882307 /* SegmentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentationViewController.m; sourceTree = "<group>"; };
 		630A4D161DB6737300882307 /* NSString+YJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YJTools.h"; sourceTree = "<group>"; };
 		630A4D171DB6737300882307 /* NSString+YJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YJTools.m"; sourceTree = "<group>"; };
+		633667DE1DD08F8200307E31 /* PlaySoundAndShocking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaySoundAndShocking.h; sourceTree = "<group>"; };
+		633667DF1DD08F8200307E31 /* PlaySoundAndShocking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaySoundAndShocking.m; sourceTree = "<group>"; };
+		633667E31DD0921F00307E31 /* soundSucceed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = soundSucceed.wav; sourceTree = "<group>"; };
+		633667E41DD0921F00307E31 /* Taito_Carousel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Taito_Carousel.wav; sourceTree = "<group>"; };
+		633667E71DD092A100307E31 /* PlaySoundAndShockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaySoundAndShockViewController.h; sourceTree = "<group>"; };
+		633667E81DD092A100307E31 /* PlaySoundAndShockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaySoundAndShockViewController.m; sourceTree = "<group>"; };
 		63668ED51DB873DA003646E2 /* NSObject+YJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YJTools.h"; sourceTree = "<group>"; };
 		63668ED61DB873DA003646E2 /* NSObject+YJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YJTools.m"; sourceTree = "<group>"; };
 		63668EDB1DB87432003646E2 /* ConvertTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertTypeViewController.h; sourceTree = "<group>"; };
@@ -69,6 +79,32 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		633667DD1DD08F7200307E31 /* PlaySoundAndShocking */ = {
+			isa = PBXGroup;
+			children = (
+				633667DE1DD08F8200307E31 /* PlaySoundAndShocking.h */,
+				633667DF1DD08F8200307E31 /* PlaySoundAndShocking.m */,
+			);
+			path = PlaySoundAndShocking;
+			sourceTree = "<group>";
+		};
+		633667E11DD0921F00307E31 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				633667E21DD0921F00307E31 /* Media */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		633667E21DD0921F00307E31 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				633667E31DD0921F00307E31 /* soundSucceed.wav */,
+				633667E41DD0921F00307E31 /* Taito_Carousel.wav */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		63AC99D01DADFF6A0089278D = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +124,8 @@
 		63AC99DB1DADFF6A0089278D /* YJToolsGather */ = {
 			isa = PBXGroup;
 			children = (
+				633667E11DD0921F00307E31 /* Resources */,
+				633667DD1DD08F7200307E31 /* PlaySoundAndShocking */,
 				630A4D151DB6734A00882307 /* Category */,
 				63AC99F31DAE003E0089278D /* MonitorMuteManager */,
 				63AC99DF1DADFF6A0089278D /* AppDelegate.h */,
@@ -99,6 +137,8 @@
 				630A4D131DB6732B00882307 /* SegmentationViewController.m */,
 				63668EDB1DB87432003646E2 /* ConvertTypeViewController.h */,
 				63668EDC1DB87432003646E2 /* ConvertTypeViewController.m */,
+				633667E71DD092A100307E31 /* PlaySoundAndShockViewController.h */,
+				633667E81DD092A100307E31 /* PlaySoundAndShockViewController.m */,
 				63AC99DC1DADFF6A0089278D /* Supporting Files */,
 			);
 			path = YJToolsGather;
@@ -189,7 +229,9 @@
 				63AC99F71DAE003E0089278D /* detection.aiff in Resources */,
 				63AC9A001DAE2EE40089278D /* YJMainViewController.xib in Resources */,
 				63AC99E91DADFF6A0089278D /* Assets.xcassets in Resources */,
+				633667E61DD0921F00307E31 /* Taito_Carousel.wav in Resources */,
 				63AC99E71DADFF6A0089278D /* Main.storyboard in Resources */,
+				633667E51DD0921F00307E31 /* soundSucceed.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +250,8 @@
 				63668EDD1DB87432003646E2 /* ConvertTypeViewController.m in Sources */,
 				63AC99FF1DAE2EE40089278D /* YJMainViewController.m in Sources */,
 				630A4D141DB6732B00882307 /* SegmentationViewController.m in Sources */,
+				633667E01DD08F8200307E31 /* PlaySoundAndShocking.m in Sources */,
+				633667E91DD092A100307E31 /* PlaySoundAndShockViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
