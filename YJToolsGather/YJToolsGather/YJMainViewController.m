@@ -11,8 +11,10 @@
 #import "SegmentationViewController.h"
 #import "ConvertTypeViewController.h"
 #import "PlaySoundAndShockViewController.h"
+#import <MessageUI/MessageUI.h>
+#import <AddressBook/AddressBook.h>
 
-@interface YJMainViewController () <UITableViewDataSource, UITableViewDelegate, MonitorMuteManagerDelegate>
+@interface YJMainViewController () <UITableViewDataSource, UITableViewDelegate, MonitorMuteManagerDelegate, MFMessageComposeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray * dataSource;
@@ -37,7 +39,7 @@
     
     self.tableView.tableFooterView = [UIView new];
     
-    NSArray * dataSource = @[@"查看手机是否静音", @"测试中文分词功能", @"类型转换", @"播放声音和震动"];
+    NSArray * dataSource = @[@"查看手机是否静音", @"测试中文分词功能", @"类型转换", @"播放声音和震动", @"是否可发短信"];
     
     self.dataSource = [NSMutableArray arrayWithArray:dataSource];
     
@@ -81,8 +83,63 @@
     }else if (indexPath.row == 3){
         PlaySoundAndShockViewController * convert = [[PlaySoundAndShockViewController alloc] init];
         pushVc = convert;
+    }else if (indexPath.row == 4){
+        [self sendMessage];
     }
-    [self.navigationController pushViewController:pushVc animated:YES];
+    if (pushVc) {
+        [self.navigationController pushViewController:pushVc animated:YES];
+    }
+}
+
+#pragma mark - 发送短信
+- (void)sendMessage{
+    // 1.是否可发短信
+    BOOL canSendSMS = [MFMessageComposeViewController canSendText];
+    
+    if (canSendSMS) {
+        ABAddressBookRef addressBook = NULL;
+        __block BOOL accessGranted = NO;
+        
+        if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusDenied) {
+            // 添加提示开启授权
+        }
+        if (&ABAddressBookRequestAccessWithCompletion != NULL) { // iOS 6
+            addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
+            dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+            ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
+                accessGranted = granted;
+                dispatch_semaphore_signal(sema);
+            });
+            dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+            //            dispatch_release(sema);YJ.4.23
+            
+            if (accessGranted) {
+                MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
+                picker.messageComposeDelegate = self;
+                if ([picker.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
+                {
+                    [picker.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+                    picker.navigationBar.tintColor = nil;
+                    
+                }
+                picker.body = @"短信内容";
+                [self presentViewController:picker animated:YES completion:nil];
+            }
+        }else{
+            MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
+            picker.messageComposeDelegate = self;
+            if ([picker.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
+            {
+                [picker.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+                picker.navigationBar.tintColor = [UIColor redColor];
+                
+            }
+            picker.body = @"短信内容";
+            [self presentViewController:picker animated:YES completion:nil];
+        }
+    }else{
+        // 给出不支持短信的提示
+    }
 }
 
 #pragma mark - MonitorMuteManagerDelegate
