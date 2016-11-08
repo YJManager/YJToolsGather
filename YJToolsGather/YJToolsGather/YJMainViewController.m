@@ -143,6 +143,27 @@
     }
 }
 
+#pragma mark - 发送短信api的回调函数
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
+    
+    [self  dismissViewControllerAnimated:YES completion:nil];
+    
+    switch (result) {
+        case MessageComposeResultCancelled:{
+            
+            break;
+        }
+        case MessageComposeResultSent:{
+            break;
+        }
+        case MessageComposeResultFailed:{
+            break;
+        }
+        default:
+            break;
+    }
+}
+
 #pragma mark - MonitorMuteManagerDelegate
 - (void)volumeModeMuted:(BOOL)muted{
     NSString * mutedMessage = muted?@"静音":@"响亮";
