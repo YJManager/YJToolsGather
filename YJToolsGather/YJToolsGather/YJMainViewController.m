@@ -103,29 +103,30 @@
         if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusDenied) {
             // 添加提示开启授权
         }
-        if (&ABAddressBookRequestAccessWithCompletion != NULL) { // iOS 6
-            addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
-            dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-            ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
-                accessGranted = granted;
-                dispatch_semaphore_signal(sema);
-            });
-            dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-            //            dispatch_release(sema);YJ.4.23
-            
-            if (accessGranted) {
-                MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
-                picker.messageComposeDelegate = self;
-                if ([picker.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
-                {
-                    [picker.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-                    picker.navigationBar.tintColor = nil;
-                    
-                }
-                picker.body = @"短信内容";
-                [self presentViewController:picker animated:YES completion:nil];
-            }
-        }else{
+//        if (&ABAddressBookRequestAccessWithCompletion != NULL) { // iOS 6
+//            addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
+//            dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+//            ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
+//                accessGranted = granted;
+//                dispatch_semaphore_signal(sema);
+//            });
+//            dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+//            //            dispatch_release(sema);YJ.4.23
+//            
+//            if (accessGranted) {
+//                MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
+//                picker.messageComposeDelegate = self;
+//                if ([picker.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
+//                {
+//                    [picker.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+//                    picker.navigationBar.tintColor = nil;
+//                    
+//                }
+//                picker.body = @"短信内容";
+//                [self presentViewController:picker animated:YES completion:nil];
+//            }
+//        }else
+        {
             MFMessageComposeViewController *picker = [[MFMessageComposeViewController alloc] init];
             picker.messageComposeDelegate = self;
             if ([picker.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
