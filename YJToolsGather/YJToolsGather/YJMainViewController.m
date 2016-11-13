@@ -39,7 +39,12 @@
     
     self.tableView.tableFooterView = [UIView new];
     
-    NSArray * dataSource = @[@"查看手机是否静音", @"测试中文分词功能", @"类型转换", @"播放声音和震动", @"是否可发短信"];
+    NSArray * dataSource = @[@"查看手机是否静音",
+                             @"测试中文分词功能",
+                             @"类型转换",
+                             @"播放声音和震动",
+                             @"是否可发短信"
+                             ];
     
     self.dataSource = [NSMutableArray arrayWithArray:dataSource];
     

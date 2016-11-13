@@ -8,8 +8,12 @@
 
 #import "PlaySoundAndShockViewController.h"
 #import "PlaySoundAndShocking.h"
+#import "YJSwitch.h"
 
 @interface PlaySoundAndShockViewController ()
+
+@property (nonatomic, assign) BOOL isCanPlay; /** 是否可以播放声音 */
+
 
 @end
 
@@ -18,13 +22,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-
-    // Do any additional setup after loading the view.
+    self.navigationItem.title = @"播放断音和震动";
+    [self _setUpPlaySoundAndShockMainView];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+- (void)_setUpPlaySoundAndShockMainView{
+    
+    UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(50, 200, 120, 40);
+    [btn setTitle:@"播放" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(btnActionClick) forControlEvents:UIControlEventTouchUpInside];
+    btn.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:btn];
+    
+    
+    YJSwitch *sw = [[YJSwitch alloc] init];
+    sw.frame = CGRectMake(100, 100, 50, 20);
+    sw.clipsToBounds = YES;
+    [sw addTarget:self action:@selector(YJSwitchChange:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:sw];
+}
 
-    [PlaySoundAndShocking playSoundAndShacking:NO];
+- (void)YJSwitchChange:(YJSwitch *)switchValue{
+    
+    self.isCanPlay = switchValue.isShowWords;
+
+}
+
+- (void)btnActionClick{
+    
+    if (self.isCanPlay) {
+        [PlaySoundAndShocking playSoundAndShacking:NO];
+    }else{
+        [PlaySoundAndShocking playShacking];
+    }
 }
 
 @end
