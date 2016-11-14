@@ -30,6 +30,7 @@
     [self _setUpMainView];
 }
 
+
 - (void)_setUpMainNavView{
     self.navigationItem.title = @"测试";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.muteModelLabel];
