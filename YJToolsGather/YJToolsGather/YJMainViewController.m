@@ -13,6 +13,7 @@
 #import "PlaySoundAndShockViewController.h"
 #import <MessageUI/MessageUI.h>
 #import <AddressBook/AddressBook.h>
+#import "RuntimeViewController.h"
 
 @interface YJMainViewController () <UITableViewDataSource, UITableViewDelegate, MonitorMuteManagerDelegate, MFMessageComposeViewControllerDelegate>
 
@@ -44,7 +45,8 @@
                              @"测试中文分词功能",
                              @"类型转换",
                              @"播放声音和震动",
-                             @"是否可发短信"
+                             @"是否可发短信",
+                             @"Runtime"
                              ];
     
     self.dataSource = [NSMutableArray arrayWithArray:dataSource];
@@ -91,6 +93,9 @@
         pushVc = convert;
     }else if (indexPath.row == 4){
         [self sendMessage];
+    }else if (indexPath.row == 5){
+        RuntimeViewController * runtime = [[RuntimeViewController alloc] init];
+        pushVc = runtime;
     }
     if (pushVc) {
         [self.navigationController pushViewController:pushVc animated:YES];

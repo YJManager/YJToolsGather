@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		630A4D141DB6732B00882307 /* SegmentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A4D131DB6732B00882307 /* SegmentationViewController.m */; };
 		630A4D181DB6737300882307 /* NSString+YJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 630A4D171DB6737300882307 /* NSString+YJTools.m */; };
+		6317C6BE1DDEF5C00020D14B /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6317C6BD1DDEF5C00020D14B /* RuntimeViewController.m */; };
+		6317C6C21DDEF6620020D14B /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6317C6C11DDEF6620020D14B /* Person.m */; };
+		6317C6C51DDF01F90020D14B /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6317C6C41DDF01F90020D14B /* Dog.m */; };
 		633667E01DD08F8200307E31 /* PlaySoundAndShocking.m in Sources */ = {isa = PBXBuildFile; fileRef = 633667DF1DD08F8200307E31 /* PlaySoundAndShocking.m */; };
 		633667E51DD0921F00307E31 /* soundSucceed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 633667E31DD0921F00307E31 /* soundSucceed.wav */; };
 		633667E61DD0921F00307E31 /* Taito_Carousel.wav in Resources */ = {isa = PBXBuildFile; fileRef = 633667E41DD0921F00307E31 /* Taito_Carousel.wav */; };
@@ -37,6 +40,12 @@
 		630A4D131DB6732B00882307 /* SegmentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentationViewController.m; sourceTree = "<group>"; };
 		630A4D161DB6737300882307 /* NSString+YJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YJTools.h"; sourceTree = "<group>"; };
 		630A4D171DB6737300882307 /* NSString+YJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YJTools.m"; sourceTree = "<group>"; };
+		6317C6BC1DDEF5C00020D14B /* RuntimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeViewController.h; sourceTree = "<group>"; };
+		6317C6BD1DDEF5C00020D14B /* RuntimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeViewController.m; sourceTree = "<group>"; };
+		6317C6C01DDEF6620020D14B /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		6317C6C11DDEF6620020D14B /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		6317C6C31DDF01F90020D14B /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		6317C6C41DDF01F90020D14B /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 		633667DE1DD08F8200307E31 /* PlaySoundAndShocking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaySoundAndShocking.h; sourceTree = "<group>"; };
 		633667DF1DD08F8200307E31 /* PlaySoundAndShocking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaySoundAndShocking.m; sourceTree = "<group>"; };
 		633667E31DD0921F00307E31 /* soundSucceed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = soundSucceed.wav; sourceTree = "<group>"; };
@@ -95,6 +104,27 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		6317C6BB1DDEF5C00020D14B /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				6317C6BF1DDEF64B0020D14B /* Model */,
+				6317C6BC1DDEF5C00020D14B /* RuntimeViewController.h */,
+				6317C6BD1DDEF5C00020D14B /* RuntimeViewController.m */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		6317C6BF1DDEF64B0020D14B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6317C6C01DDEF6620020D14B /* Person.h */,
+				6317C6C11DDEF6620020D14B /* Person.m */,
+				6317C6C31DDF01F90020D14B /* Dog.h */,
+				6317C6C41DDF01F90020D14B /* Dog.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		633667DD1DD08F7200307E31 /* PlaySoundAndShocking */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +170,7 @@
 		63AC99DB1DADFF6A0089278D /* YJToolsGather */ = {
 			isa = PBXGroup;
 			children = (
+				6317C6BB1DDEF5C00020D14B /* Runtime */,
 				63B302081DD86B120059BA96 /* YJViews */,
 				633667E11DD0921F00307E31 /* Resources */,
 				633667DD1DD08F7200307E31 /* PlaySoundAndShocking */,
@@ -278,14 +309,17 @@
 			files = (
 				630A4D181DB6737300882307 /* NSString+YJTools.m in Sources */,
 				63AC99E11DADFF6A0089278D /* AppDelegate.m in Sources */,
+				6317C6C21DDEF6620020D14B /* Person.m in Sources */,
 				63AC99DE1DADFF6A0089278D /* main.m in Sources */,
 				63668ED71DB873DA003646E2 /* NSObject+YJTools.m in Sources */,
 				63AC99FB1DAE01330089278D /* MonitorMuteManager.m in Sources */,
 				63668EDD1DB87432003646E2 /* ConvertTypeViewController.m in Sources */,
 				63AC99FF1DAE2EE40089278D /* YJMainViewController.m in Sources */,
+				6317C6BE1DDEF5C00020D14B /* RuntimeViewController.m in Sources */,
 				63B3020B1DD86B440059BA96 /* YJSwitch.m in Sources */,
 				63B302161DD86CC00059BA96 /* UIImage+YJTools.m in Sources */,
 				630A4D141DB6732B00882307 /* SegmentationViewController.m in Sources */,
+				6317C6C51DDF01F90020D14B /* Dog.m in Sources */,
 				633667E01DD08F8200307E31 /* PlaySoundAndShocking.m in Sources */,
 				633667E91DD092A100307E31 /* PlaySoundAndShockViewController.m in Sources */,
 			);
