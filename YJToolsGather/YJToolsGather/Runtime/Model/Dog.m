@@ -14,4 +14,8 @@
     return 1200;
 }
 
+- (void)setID:(NSString *)ID{
+    NSLog(@"Dog setID: %@", ID);
+}
+
 @end

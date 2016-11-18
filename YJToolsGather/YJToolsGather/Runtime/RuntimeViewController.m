@@ -37,6 +37,7 @@
     
     Person *person = [[personClass alloc] init];
     person.height = 30;
+    person.ID = @"123";
     NSLog(@"-- %ld", person.height);
     
     
