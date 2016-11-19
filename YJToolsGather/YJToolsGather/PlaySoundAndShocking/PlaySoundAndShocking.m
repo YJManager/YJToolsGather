@@ -31,7 +31,7 @@
         else
         {
             SystemSoundID soundID;
-            NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"Taito_Carousel" ofType:@"wav"];
+            NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"shake_sound_kongfu" ofType:@"mp3"];
             AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile], &soundID);
             AudioServicesPlaySystemSound(soundID);
         }

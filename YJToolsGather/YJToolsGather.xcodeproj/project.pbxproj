@@ -12,6 +12,9 @@
 		6317C6BE1DDEF5C00020D14B /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6317C6BD1DDEF5C00020D14B /* RuntimeViewController.m */; };
 		6317C6C21DDEF6620020D14B /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 6317C6C11DDEF6620020D14B /* Person.m */; };
 		6317C6C51DDF01F90020D14B /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6317C6C41DDF01F90020D14B /* Dog.m */; };
+		6322B9C41DE0A1320033554E /* YaoYiYaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6322B9C31DE0A1320033554E /* YaoYiYaoViewController.m */; };
+		6322B9C71DE0A2EE0033554E /* shake_match.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6322B9C51DE0A2EE0033554E /* shake_match.mp3 */; };
+		6322B9C81DE0A2EE0033554E /* shake_sound_kongfu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6322B9C61DE0A2EE0033554E /* shake_sound_kongfu.mp3 */; };
 		633667E01DD08F8200307E31 /* PlaySoundAndShocking.m in Sources */ = {isa = PBXBuildFile; fileRef = 633667DF1DD08F8200307E31 /* PlaySoundAndShocking.m */; };
 		633667E51DD0921F00307E31 /* soundSucceed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 633667E31DD0921F00307E31 /* soundSucceed.wav */; };
 		633667E61DD0921F00307E31 /* Taito_Carousel.wav in Resources */ = {isa = PBXBuildFile; fileRef = 633667E41DD0921F00307E31 /* Taito_Carousel.wav */; };
@@ -46,6 +49,10 @@
 		6317C6C11DDEF6620020D14B /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		6317C6C31DDF01F90020D14B /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		6317C6C41DDF01F90020D14B /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		6322B9C21DE0A1320033554E /* YaoYiYaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YaoYiYaoViewController.h; sourceTree = "<group>"; };
+		6322B9C31DE0A1320033554E /* YaoYiYaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YaoYiYaoViewController.m; sourceTree = "<group>"; };
+		6322B9C51DE0A2EE0033554E /* shake_match.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_match.mp3; sourceTree = "<group>"; };
+		6322B9C61DE0A2EE0033554E /* shake_sound_kongfu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shake_sound_kongfu.mp3; sourceTree = "<group>"; };
 		633667DE1DD08F8200307E31 /* PlaySoundAndShocking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaySoundAndShocking.h; sourceTree = "<group>"; };
 		633667DF1DD08F8200307E31 /* PlaySoundAndShocking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaySoundAndShocking.m; sourceTree = "<group>"; };
 		633667E31DD0921F00307E31 /* soundSucceed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = soundSucceed.wav; sourceTree = "<group>"; };
@@ -125,6 +132,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		6322B9C11DE0A1190033554E /* YaoYiYao */ = {
+			isa = PBXGroup;
+			children = (
+				6322B9C21DE0A1320033554E /* YaoYiYaoViewController.h */,
+				6322B9C31DE0A1320033554E /* YaoYiYaoViewController.m */,
+			);
+			path = YaoYiYao;
+			sourceTree = "<group>";
+		};
 		633667DD1DD08F7200307E31 /* PlaySoundAndShocking */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +161,8 @@
 		633667E21DD0921F00307E31 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				6322B9C51DE0A2EE0033554E /* shake_match.mp3 */,
+				6322B9C61DE0A2EE0033554E /* shake_sound_kongfu.mp3 */,
 				633667E31DD0921F00307E31 /* soundSucceed.wav */,
 				633667E41DD0921F00307E31 /* Taito_Carousel.wav */,
 			);
@@ -170,6 +188,7 @@
 		63AC99DB1DADFF6A0089278D /* YJToolsGather */ = {
 			isa = PBXGroup;
 			children = (
+				6322B9C11DE0A1190033554E /* YaoYiYao */,
 				6317C6BB1DDEF5C00020D14B /* Runtime */,
 				63B302081DD86B120059BA96 /* YJViews */,
 				633667E11DD0921F00307E31 /* Resources */,
@@ -288,9 +307,11 @@
 			files = (
 				63AC99EC1DADFF6A0089278D /* LaunchScreen.storyboard in Resources */,
 				63AC99F71DAE003E0089278D /* detection.aiff in Resources */,
+				6322B9C81DE0A2EE0033554E /* shake_sound_kongfu.mp3 in Resources */,
 				63AC9A001DAE2EE40089278D /* YJMainViewController.xib in Resources */,
 				63B302101DD86C6B0059BA96 /* login_toggle_abc@2x.png in Resources */,
 				63AC99E91DADFF6A0089278D /* Assets.xcassets in Resources */,
+				6322B9C71DE0A2EE0033554E /* shake_match.mp3 in Resources */,
 				63B302111DD86C6B0059BA96 /* login_toggle_bg@2x.png in Resources */,
 				633667E61DD0921F00307E31 /* Taito_Carousel.wav in Resources */,
 				63B302121DD86C6B0059BA96 /* login_toggle_cycle@2x.png in Resources */,
@@ -313,6 +334,7 @@
 				63AC99DE1DADFF6A0089278D /* main.m in Sources */,
 				63668ED71DB873DA003646E2 /* NSObject+YJTools.m in Sources */,
 				63AC99FB1DAE01330089278D /* MonitorMuteManager.m in Sources */,
+				6322B9C41DE0A1320033554E /* YaoYiYaoViewController.m in Sources */,
 				63668EDD1DB87432003646E2 /* ConvertTypeViewController.m in Sources */,
 				63AC99FF1DAE2EE40089278D /* YJMainViewController.m in Sources */,
 				6317C6BE1DDEF5C00020D14B /* RuntimeViewController.m in Sources */,

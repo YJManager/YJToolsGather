@@ -14,6 +14,7 @@
 #import <MessageUI/MessageUI.h>
 #import <AddressBook/AddressBook.h>
 #import "RuntimeViewController.h"
+#import "YaoYiYaoViewController.h"
 
 @interface YJMainViewController () <UITableViewDataSource, UITableViewDelegate, MonitorMuteManagerDelegate, MFMessageComposeViewControllerDelegate>
 
@@ -46,7 +47,8 @@
                              @"类型转换",
                              @"播放声音和震动",
                              @"是否可发短信",
-                             @"Runtime"
+                             @"Runtime",
+                             @"摇一摇"
                              ];
     
     self.dataSource = [NSMutableArray arrayWithArray:dataSource];
@@ -96,6 +98,9 @@
     }else if (indexPath.row == 5){
         RuntimeViewController * runtime = [[RuntimeViewController alloc] init];
         pushVc = runtime;
+    }else if (indexPath.row == 6){
+        YaoYiYaoViewController * yaoyiyao = [[YaoYiYaoViewController alloc] init];
+        pushVc = yaoyiyao;
     }
     if (pushVc) {
         [self.navigationController pushViewController:pushVc animated:YES];
