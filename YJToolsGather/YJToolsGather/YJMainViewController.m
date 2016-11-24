@@ -15,6 +15,7 @@
 #import <AddressBook/AddressBook.h>
 #import "RuntimeViewController.h"
 #import "YaoYiYaoViewController.h"
+#import "ShowToastViewController.h"
 
 @interface YJMainViewController () <UITableViewDataSource, UITableViewDelegate, MonitorMuteManagerDelegate, MFMessageComposeViewControllerDelegate>
 
@@ -48,7 +49,8 @@
                              @"播放声音和震动",
                              @"是否可发短信",
                              @"Runtime",
-                             @"摇一摇"
+                             @"摇一摇",
+                             @"Toast"
                              ];
     
     self.dataSource = [NSMutableArray arrayWithArray:dataSource];
@@ -101,6 +103,9 @@
     }else if (indexPath.row == 6){
         YaoYiYaoViewController * yaoyiyao = [[YaoYiYaoViewController alloc] init];
         pushVc = yaoyiyao;
+    }else if (indexPath.row == 7){
+        ShowToastViewController * showToastVc = [[ShowToastViewController alloc] init];
+        pushVc = showToastVc;
     }
     if (pushVc) {
         [self.navigationController pushViewController:pushVc animated:YES];

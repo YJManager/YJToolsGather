@@ -21,6 +21,9 @@
 		633667E91DD092A100307E31 /* PlaySoundAndShockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 633667E81DD092A100307E31 /* PlaySoundAndShockViewController.m */; };
 		63668ED71DB873DA003646E2 /* NSObject+YJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 63668ED61DB873DA003646E2 /* NSObject+YJTools.m */; };
 		63668EDD1DB87432003646E2 /* ConvertTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63668EDC1DB87432003646E2 /* ConvertTypeViewController.m */; };
+		6368A3731DE727AE0004F799 /* YJTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6368A3721DE727AE0004F799 /* YJTipView.m */; };
+		6368A3791DE735560004F799 /* ShowToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6368A3781DE735560004F799 /* ShowToastViewController.m */; };
+		6368A37C1DE737170004F799 /* UIView+ShowToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6368A37B1DE737170004F799 /* UIView+ShowToast.m */; };
 		63AC99DE1DADFF6A0089278D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC99DD1DADFF6A0089278D /* main.m */; };
 		63AC99E11DADFF6A0089278D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC99E01DADFF6A0089278D /* AppDelegate.m */; };
 		63AC99E71DADFF6A0089278D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AC99E51DADFF6A0089278D /* Main.storyboard */; };
@@ -63,6 +66,12 @@
 		63668ED61DB873DA003646E2 /* NSObject+YJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YJTools.m"; sourceTree = "<group>"; };
 		63668EDB1DB87432003646E2 /* ConvertTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertTypeViewController.h; sourceTree = "<group>"; };
 		63668EDC1DB87432003646E2 /* ConvertTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvertTypeViewController.m; sourceTree = "<group>"; };
+		6368A3711DE727AE0004F799 /* YJTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJTipView.h; sourceTree = "<group>"; };
+		6368A3721DE727AE0004F799 /* YJTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJTipView.m; sourceTree = "<group>"; };
+		6368A3771DE735560004F799 /* ShowToastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowToastViewController.h; sourceTree = "<group>"; };
+		6368A3781DE735560004F799 /* ShowToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowToastViewController.m; sourceTree = "<group>"; };
+		6368A37A1DE737170004F799 /* UIView+ShowToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ShowToast.h"; sourceTree = "<group>"; };
+		6368A37B1DE737170004F799 /* UIView+ShowToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowToast.m"; sourceTree = "<group>"; };
 		63AC99D91DADFF6A0089278D /* YJToolsGather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJToolsGather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AC99DD1DADFF6A0089278D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63AC99DF1DADFF6A0089278D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -169,6 +178,17 @@
 			path = Media;
 			sourceTree = "<group>";
 		};
+		6368A3701DE727790004F799 /* YJToastView */ = {
+			isa = PBXGroup;
+			children = (
+				6368A3711DE727AE0004F799 /* YJTipView.h */,
+				6368A3721DE727AE0004F799 /* YJTipView.m */,
+				6368A37A1DE737170004F799 /* UIView+ShowToast.h */,
+				6368A37B1DE737170004F799 /* UIView+ShowToast.m */,
+			);
+			path = YJToastView;
+			sourceTree = "<group>";
+		};
 		63AC99D01DADFF6A0089278D = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +208,7 @@
 		63AC99DB1DADFF6A0089278D /* YJToolsGather */ = {
 			isa = PBXGroup;
 			children = (
+				6368A3701DE727790004F799 /* YJToastView */,
 				6322B9C11DE0A1190033554E /* YaoYiYao */,
 				6317C6BB1DDEF5C00020D14B /* Runtime */,
 				63B302081DD86B120059BA96 /* YJViews */,
@@ -206,6 +227,8 @@
 				63668EDC1DB87432003646E2 /* ConvertTypeViewController.m */,
 				633667E71DD092A100307E31 /* PlaySoundAndShockViewController.h */,
 				633667E81DD092A100307E31 /* PlaySoundAndShockViewController.m */,
+				6368A3771DE735560004F799 /* ShowToastViewController.h */,
+				6368A3781DE735560004F799 /* ShowToastViewController.m */,
 				63AC99DC1DADFF6A0089278D /* Supporting Files */,
 			);
 			path = YJToolsGather;
@@ -329,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				630A4D181DB6737300882307 /* NSString+YJTools.m in Sources */,
+				6368A37C1DE737170004F799 /* UIView+ShowToast.m in Sources */,
 				63AC99E11DADFF6A0089278D /* AppDelegate.m in Sources */,
 				6317C6C21DDEF6620020D14B /* Person.m in Sources */,
 				63AC99DE1DADFF6A0089278D /* main.m in Sources */,
@@ -343,7 +367,9 @@
 				630A4D141DB6732B00882307 /* SegmentationViewController.m in Sources */,
 				6317C6C51DDF01F90020D14B /* Dog.m in Sources */,
 				633667E01DD08F8200307E31 /* PlaySoundAndShocking.m in Sources */,
+				6368A3791DE735560004F799 /* ShowToastViewController.m in Sources */,
 				633667E91DD092A100307E31 /* PlaySoundAndShockViewController.m in Sources */,
+				6368A3731DE727AE0004F799 /* YJTipView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
