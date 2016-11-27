@@ -10,10 +10,13 @@
 
 @interface PlaySoundAndShocking : NSObject
 
-+ (void)playSoundAndShacking:(BOOL)isSucceed;
++ (PlaySoundAndShocking *)sharedInstance;
 
-+ (void)playSound;
+- (void)playSound;
 
-+ (void)playShacking;
+- (void)playShacking;
+
+/** 销毁音效 */
+- (void)disposeSystemSoundId;
 
 @end

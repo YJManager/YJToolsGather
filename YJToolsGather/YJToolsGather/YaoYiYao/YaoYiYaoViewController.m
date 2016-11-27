@@ -26,7 +26,6 @@
 
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
     NSLog(@"开始摇一摇");
-    [PlaySoundAndShocking playSoundAndShacking:NO];
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
