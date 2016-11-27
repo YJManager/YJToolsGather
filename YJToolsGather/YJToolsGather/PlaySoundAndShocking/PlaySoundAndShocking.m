@@ -23,54 +23,61 @@
 #import "PlaySoundAndShocking.h"
 #import <AudioToolbox/AudioToolbox.h>
 
+static NSMutableDictionary const * _soundIdDic_;
+
 @interface PlaySoundAndShocking ()
-
-@property (nonatomic, assign) SystemSoundID successSoundId; /** 成功的音效Id */
-@property (nonatomic, assign) SystemSoundID kongfuSoundId; /** kongfu的音效Id */
-
 
 @end
 
 @implementation PlaySoundAndShocking
 
-+ (PlaySoundAndShocking *)sharedInstance{
-    static PlaySoundAndShocking * _playManager_ = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _playManager_ = [[PlaySoundAndShocking alloc] init];
-    });
-    return _playManager_;
++ (void)initialize{
+    _soundIdDic_ = [NSMutableDictionary dictionary];
 }
 
-- (void)playSound{
-    AudioServicesPlaySystemSound(self.successSoundId);
-//    AudioServicesPlayAlertSound(self.successSoundId); // 会震动
++ (void)playSoundFileName:(NSString *)fileName{
+    
+    if (!fileName) return;
+    
+    SystemSoundID soundId = [[_soundIdDic_ objectForKey:fileName] unsignedIntValue];
+    if (!soundId) {
+        NSString *soundFile = [[NSBundle mainBundle] pathForResource:fileName ofType:nil];
+        if (!soundFile) return;
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile], &soundId);
+        if (soundId) {
+            AudioServicesPlaySystemSound(soundId);
+            //    AudioServicesPlayAlertSound(soundId); // 会震动
+            // 保存
+            [_soundIdDic_ setObject:@(soundId) forKey:fileName];
+        }
+    }else{
+//        AudioServicesPlaySystemSound(soundId);
+        AudioServicesPlayAlertSound(soundId); // 会震动
+    }
 }
 
-- (void)playShacking{
++ (void)disposeSoundFileName:(NSString *)fileName{
+    
+    if (!fileName) return;
+    
+    SystemSoundID soundId = [[_soundIdDic_ objectForKey:fileName] unsignedIntValue];
+
+    if (!soundId) {
+        AudioServicesDisposeSystemSoundID(soundId);
+        [_soundIdDic_ removeObjectForKey:fileName];
+    }
+}
+
++ (void)playShacking{
     AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);
 }
 
-#pragma mark - Lazy -
-- (SystemSoundID)successSoundId{
-    if (!_successSoundId) {
-        NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"soundSucceed" ofType:@"wav"];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile], &_successSoundId);
-    }
-    return _successSoundId;
++ (void)playSuccessSound{
+    [self playSoundFileName:@"Taito_Carousel.wav"];
 }
 
-- (SystemSoundID)kongfuSoundId{
-    if (!_kongfuSoundId) {
-        NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"shake_sound_kongfu" ofType:@"mp3"];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile], &_kongfuSoundId);
-    }
-    return _kongfuSoundId;
-}
-
-- (void)disposeSystemSoundId{
-    AudioServicesDisposeSystemSoundID(self.successSoundId);
-    self.successSoundId = 0;
++ (void)playKongFuSound{
+    [self playSoundFileName:@"shake_sound_kongfu.mp3"];
 }
 
 

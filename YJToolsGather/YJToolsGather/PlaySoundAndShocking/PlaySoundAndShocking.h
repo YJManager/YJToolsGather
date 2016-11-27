@@ -10,13 +10,13 @@
 
 @interface PlaySoundAndShocking : NSObject
 
-+ (PlaySoundAndShocking *)sharedInstance;
++ (void)playSoundFileName:(NSString *)fileName;
++ (void)disposeSoundFileName:(NSString *)fileName;
++ (void)playShacking;
 
-- (void)playSound;
 
-- (void)playShacking;
++ (void)playSuccessSound;
++ (void)playKongFuSound;
 
-/** 销毁音效 */
-- (void)disposeSystemSoundId;
 
 @end

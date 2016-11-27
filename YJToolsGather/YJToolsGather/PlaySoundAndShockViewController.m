@@ -52,9 +52,9 @@
 - (void)btnActionClick{
     
     if (self.isCanPlay) {
-        [[PlaySoundAndShocking sharedInstance] playSound];
+        [PlaySoundAndShocking playSuccessSound];
     }else{
-        [[PlaySoundAndShocking sharedInstance] playShacking];
+        [PlaySoundAndShocking playShacking];
     }
 }
 
