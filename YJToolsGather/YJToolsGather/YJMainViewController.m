@@ -16,6 +16,7 @@
 #import "RuntimeViewController.h"
 #import "YaoYiYaoViewController.h"
 #import "ShowToastViewController.h"
+#import "SendEmailViewController.h"
 
 @interface YJMainViewController () <UITableViewDataSource, UITableViewDelegate, MonitorMuteManagerDelegate, MFMessageComposeViewControllerDelegate>
 
@@ -50,7 +51,8 @@
                              @"是否可发短信",
                              @"Runtime",
                              @"摇一摇",
-                             @"Toast"
+                             @"Toast",
+                             @"发邮件"
                              ];
     
     self.dataSource = [NSMutableArray arrayWithArray:dataSource];
@@ -105,6 +107,9 @@
         pushVc = yaoyiyao;
     }else if (indexPath.row == 7){
         ShowToastViewController * showToastVc = [[ShowToastViewController alloc] init];
+        pushVc = showToastVc;
+    }else if (indexPath.row == 8){
+        SendEmailViewController * showToastVc = [[SendEmailViewController alloc] init];
         pushVc = showToastVc;
     }
     if (pushVc) {

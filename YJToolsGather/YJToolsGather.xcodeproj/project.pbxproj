@@ -24,6 +24,8 @@
 		6368A3731DE727AE0004F799 /* YJTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6368A3721DE727AE0004F799 /* YJTipView.m */; };
 		6368A3791DE735560004F799 /* ShowToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6368A3781DE735560004F799 /* ShowToastViewController.m */; };
 		6368A37C1DE737170004F799 /* UIView+ShowToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6368A37B1DE737170004F799 /* UIView+ShowToast.m */; };
+		63825ACC1DF6A45400047DEC /* SendEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63825ACB1DF6A45400047DEC /* SendEmailViewController.m */; };
+		63825ACF1DF6BD2600047DEC /* YJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63825ACE1DF6BD2600047DEC /* YJNavigationController.m */; };
 		63AC99DE1DADFF6A0089278D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC99DD1DADFF6A0089278D /* main.m */; };
 		63AC99E11DADFF6A0089278D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC99E01DADFF6A0089278D /* AppDelegate.m */; };
 		63AC99E71DADFF6A0089278D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AC99E51DADFF6A0089278D /* Main.storyboard */; };
@@ -72,6 +74,10 @@
 		6368A3781DE735560004F799 /* ShowToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowToastViewController.m; sourceTree = "<group>"; };
 		6368A37A1DE737170004F799 /* UIView+ShowToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ShowToast.h"; sourceTree = "<group>"; };
 		6368A37B1DE737170004F799 /* UIView+ShowToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowToast.m"; sourceTree = "<group>"; };
+		63825ACA1DF6A45400047DEC /* SendEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendEmailViewController.h; sourceTree = "<group>"; };
+		63825ACB1DF6A45400047DEC /* SendEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendEmailViewController.m; sourceTree = "<group>"; };
+		63825ACD1DF6BD2600047DEC /* YJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJNavigationController.h; sourceTree = "<group>"; };
+		63825ACE1DF6BD2600047DEC /* YJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJNavigationController.m; sourceTree = "<group>"; };
 		63AC99D91DADFF6A0089278D /* YJToolsGather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJToolsGather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AC99DD1DADFF6A0089278D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63AC99DF1DADFF6A0089278D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -189,6 +195,23 @@
 			path = YJToastView;
 			sourceTree = "<group>";
 		};
+		63825AC81DF6A43100047DEC /* SubViewController */ = {
+			isa = PBXGroup;
+			children = (
+				63825AC91DF6A43100047DEC /* SendEMail */,
+			);
+			path = SubViewController;
+			sourceTree = "<group>";
+		};
+		63825AC91DF6A43100047DEC /* SendEMail */ = {
+			isa = PBXGroup;
+			children = (
+				63825ACA1DF6A45400047DEC /* SendEmailViewController.h */,
+				63825ACB1DF6A45400047DEC /* SendEmailViewController.m */,
+			);
+			path = SendEMail;
+			sourceTree = "<group>";
+		};
 		63AC99D01DADFF6A0089278D = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +231,7 @@
 		63AC99DB1DADFF6A0089278D /* YJToolsGather */ = {
 			isa = PBXGroup;
 			children = (
+				63825AC81DF6A43100047DEC /* SubViewController */,
 				6368A3701DE727790004F799 /* YJToastView */,
 				6322B9C11DE0A1190033554E /* YaoYiYao */,
 				6317C6BB1DDEF5C00020D14B /* Runtime */,
@@ -218,6 +242,8 @@
 				63AC99F31DAE003E0089278D /* MonitorMuteManager */,
 				63AC99DF1DADFF6A0089278D /* AppDelegate.h */,
 				63AC99E01DADFF6A0089278D /* AppDelegate.m */,
+				63825ACD1DF6BD2600047DEC /* YJNavigationController.h */,
+				63825ACE1DF6BD2600047DEC /* YJNavigationController.m */,
 				63AC99FC1DAE2EE40089278D /* YJMainViewController.h */,
 				63AC99FD1DAE2EE40089278D /* YJMainViewController.m */,
 				63AC99FE1DAE2EE40089278D /* YJMainViewController.xib */,
@@ -364,10 +390,12 @@
 				6317C6BE1DDEF5C00020D14B /* RuntimeViewController.m in Sources */,
 				63B3020B1DD86B440059BA96 /* YJSwitch.m in Sources */,
 				63B302161DD86CC00059BA96 /* UIImage+YJTools.m in Sources */,
+				63825ACF1DF6BD2600047DEC /* YJNavigationController.m in Sources */,
 				630A4D141DB6732B00882307 /* SegmentationViewController.m in Sources */,
 				6317C6C51DDF01F90020D14B /* Dog.m in Sources */,
 				633667E01DD08F8200307E31 /* PlaySoundAndShocking.m in Sources */,
 				6368A3791DE735560004F799 /* ShowToastViewController.m in Sources */,
+				63825ACC1DF6A45400047DEC /* SendEmailViewController.m in Sources */,
 				633667E91DD092A100307E31 /* PlaySoundAndShockViewController.m in Sources */,
 				6368A3731DE727AE0004F799 /* YJTipView.m in Sources */,
 			);

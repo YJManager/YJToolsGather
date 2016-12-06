@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YJNavigationController.h"
 #import "YJMainViewController.h"
 
 @interface AppDelegate (){
@@ -26,14 +27,14 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     YJMainViewController * mianVc = [[YJMainViewController alloc] initWithNibName:@"YJMainViewController" bundle:nil];
-    UINavigationController * mainNav = [[UINavigationController alloc] initWithRootViewController:mianVc];
+    YJNavigationController * mainNav = [[YJNavigationController alloc] initWithRootViewController:mianVc];
     self.window.rootViewController = mainNav;
     
     [self.window makeKeyAndVisible];
     
     _queue = dispatch_queue_create([[NSString stringWithFormat:@"houmanager.%@", self] UTF8String], NULL);
     
-    NSLog(@"_queue = %@", _queue);
+//    NSLog(@"_queue = %@", _queue);
 
 
     
