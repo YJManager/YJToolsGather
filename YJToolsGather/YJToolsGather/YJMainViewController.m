@@ -17,6 +17,7 @@
 #import "YaoYiYaoViewController.h"
 #import "ShowToastViewController.h"
 #import "SendEmailViewController.h"
+#import "PinYinViewController.h"
 
 @interface YJMainViewController () <UITableViewDataSource, UITableViewDelegate, MonitorMuteManagerDelegate, MFMessageComposeViewControllerDelegate>
 
@@ -52,7 +53,8 @@
                              @"Runtime",
                              @"摇一摇",
                              @"Toast",
-                             @"发邮件和只能输入规定字符"
+                             @"发邮件和只能输入规定字符",
+                             @"拼音"
                              ];
     
     self.dataSource = [NSMutableArray arrayWithArray:dataSource];
@@ -110,6 +112,9 @@
         pushVc = showToastVc;
     }else if (indexPath.row == 8){
         SendEmailViewController * showToastVc = [[SendEmailViewController alloc] init];
+        pushVc = showToastVc;
+    }else if (indexPath.row == 9){
+        PinYinViewController * showToastVc = [[PinYinViewController alloc] init];
         pushVc = showToastVc;
     }
     if (pushVc) {

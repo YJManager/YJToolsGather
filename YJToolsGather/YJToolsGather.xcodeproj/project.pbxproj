@@ -41,6 +41,8 @@
 		63B302121DD86C6B0059BA96 /* login_toggle_cycle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B3020E1DD86C6B0059BA96 /* login_toggle_cycle@2x.png */; };
 		63B302131DD86C6B0059BA96 /* login_toggle_dian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B3020F1DD86C6B0059BA96 /* login_toggle_dian@2x.png */; };
 		63B302161DD86CC00059BA96 /* UIImage+YJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B302151DD86CC00059BA96 /* UIImage+YJTools.m */; };
+		63D6BE751DF7E25B000279E9 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = 63D6BE731DF7E25B000279E9 /* pinyin.c */; };
+		63D6BE781DF7E26B000279E9 /* PinYinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D6BE771DF7E26B000279E9 /* PinYinViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +102,10 @@
 		63B3020F1DD86C6B0059BA96 /* login_toggle_dian@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_toggle_dian@2x.png"; sourceTree = "<group>"; };
 		63B302141DD86CC00059BA96 /* UIImage+YJTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YJTools.h"; sourceTree = "<group>"; };
 		63B302151DD86CC00059BA96 /* UIImage+YJTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YJTools.m"; sourceTree = "<group>"; };
+		63D6BE731DF7E25B000279E9 /* pinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pinyin.c; sourceTree = "<group>"; };
+		63D6BE741DF7E25B000279E9 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
+		63D6BE761DF7E26B000279E9 /* PinYinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYinViewController.h; sourceTree = "<group>"; };
+		63D6BE771DF7E26B000279E9 /* PinYinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinYinViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,7 @@
 		63825AC81DF6A43100047DEC /* SubViewController */ = {
 			isa = PBXGroup;
 			children = (
+				63D6BE711DF7E25B000279E9 /* PinYin */,
 				63825AC91DF6A43100047DEC /* SendEMail */,
 			);
 			path = SubViewController;
@@ -295,6 +302,25 @@
 			path = YJViews;
 			sourceTree = "<group>";
 		};
+		63D6BE711DF7E25B000279E9 /* PinYin */ = {
+			isa = PBXGroup;
+			children = (
+				63D6BE721DF7E25B000279E9 /* Resource */,
+				63D6BE761DF7E26B000279E9 /* PinYinViewController.h */,
+				63D6BE771DF7E26B000279E9 /* PinYinViewController.m */,
+			);
+			path = PinYin;
+			sourceTree = "<group>";
+		};
+		63D6BE721DF7E25B000279E9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				63D6BE731DF7E25B000279E9 /* pinyin.c */,
+				63D6BE741DF7E25B000279E9 /* pinyin.h */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -377,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D6BE781DF7E26B000279E9 /* PinYinViewController.m in Sources */,
 				630A4D181DB6737300882307 /* NSString+YJTools.m in Sources */,
 				6368A37C1DE737170004F799 /* UIView+ShowToast.m in Sources */,
 				63AC99E11DADFF6A0089278D /* AppDelegate.m in Sources */,
@@ -389,6 +416,7 @@
 				63AC99FF1DAE2EE40089278D /* YJMainViewController.m in Sources */,
 				6317C6BE1DDEF5C00020D14B /* RuntimeViewController.m in Sources */,
 				63B3020B1DD86B440059BA96 /* YJSwitch.m in Sources */,
+				63D6BE751DF7E25B000279E9 /* pinyin.c in Sources */,
 				63B302161DD86CC00059BA96 /* UIImage+YJTools.m in Sources */,
 				63825ACF1DF6BD2600047DEC /* YJNavigationController.m in Sources */,
 				630A4D141DB6732B00882307 /* SegmentationViewController.m in Sources */,
