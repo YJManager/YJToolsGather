@@ -59,7 +59,7 @@
     [sendBtn addTarget:self action:@selector(sendEmailToMyEmail) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:sendBtn];
     
-
+    self.phoneField.backgroundColor = [UIColor redColor];
     
 }
 
@@ -179,13 +179,11 @@
 ////＝＝＝＝＝＝＝＝＝＝＝＝＝ 方法一 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 - (BOOL)textField:(UITextField*)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString*)string{
-    NSCharacterSet*cs;
-    cs = [[NSCharacterSet characterSetWithCharactersInString:NUMBERS] invertedSet];
+    NSCharacterSet *cs = [[NSCharacterSet characterSetWithCharactersInString:NUMBERS] invertedSet];
     NSString*filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
     BOOL basicTest = [string isEqualToString:filtered];
     if(!basicTest) {
         return NO;
-        
     }
     return YES;
 }
@@ -216,8 +214,8 @@
 #pragma mark - Lazy
 - (UITextField *)phoneField{
     if (_phoneField == nil) {
-        _phoneField =[[UITextField alloc]initWithFrame:CGRectMake(100,110, 300, 40)];
-        _phoneField.placeholder = @"请输入手机号";
+        _phoneField =[[UITextField alloc]initWithFrame:CGRectMake(100,110, 160, 40)];
+        _phoneField.placeholder = @"只允许输入0~9";
         _phoneField.delegate = self;
         _phoneField.font=[UIFont systemFontOfSize:15];
         _phoneField.borderStyle=UITextBorderStyleNone;
