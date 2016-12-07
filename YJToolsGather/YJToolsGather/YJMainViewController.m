@@ -52,7 +52,7 @@
                              @"Runtime",
                              @"摇一摇",
                              @"Toast",
-                             @"发邮件"
+                             @"发邮件和只能输入数字"
                              ];
     
     self.dataSource = [NSMutableArray arrayWithArray:dataSource];

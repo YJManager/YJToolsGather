@@ -14,9 +14,12 @@
 #import "SendEmailViewController.h"
 #import <MessageUI/MessageUI.h>
 
-@interface SendEmailViewController () <MFMailComposeViewControllerDelegate>
+#define NUMBERS @"0123456789"
+
+@interface SendEmailViewController () <MFMailComposeViewControllerDelegate, UITextFieldDelegate>
 
 @property (nonatomic, copy) NSString *filePath; /**< 文件路径 */
+@property (nonatomic, strong) UITextField *phoneField; /**< 输入手机号 */
 
 @end
 
@@ -55,6 +58,7 @@
     [sendBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
     [sendBtn addTarget:self action:@selector(sendEmailToMyEmail) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:sendBtn];
+    
 
     
 }
@@ -170,6 +174,58 @@
         [alert show];
     }
 }
+
+#pragma mark - TextFieldDelegate
+////＝＝＝＝＝＝＝＝＝＝＝＝＝ 方法一 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+- (BOOL)textField:(UITextField*)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString*)string{
+    NSCharacterSet*cs;
+    cs = [[NSCharacterSet characterSetWithCharactersInString:NUMBERS] invertedSet];
+    NSString*filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+    BOOL basicTest = [string isEqualToString:filtered];
+    if(!basicTest) {
+        return NO;
+        
+    }
+    return YES;
+}
+//＝＝＝＝＝＝＝＝＝＝＝＝＝ 方法二 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+/*
+ - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+ return [self validateNumber:string];
+ }
+ 
+ - (BOOL)validateNumber:(NSString*)number {
+ BOOL res = YES;
+ NSCharacterSet* tmpSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+ int i = 0;
+ while (i < number.length) {
+ NSString * string = [number substringWithRange:NSMakeRange(i, 1)];
+ NSRange range = [string rangeOfCharacterFromSet:tmpSet];
+ if (range.length == 0) {
+ res = NO;
+ break;
+ }
+ i++;
+ }
+ return res;
+ }
+ */
+//＝＝＝＝＝＝＝＝＝＝＝＝＝ 方法二 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+#pragma mark - Lazy
+- (UITextField *)phoneField{
+    if (_phoneField == nil) {
+        _phoneField =[[UITextField alloc]initWithFrame:CGRectMake(100,110, 300, 40)];
+        _phoneField.placeholder = @"请输入手机号";
+        _phoneField.delegate = self;
+        _phoneField.font=[UIFont systemFontOfSize:15];
+        _phoneField.borderStyle=UITextBorderStyleNone;
+        [self.view addSubview:_phoneField];
+    }
+    return _phoneField;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
