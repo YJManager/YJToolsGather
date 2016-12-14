@@ -32,6 +32,8 @@ CFAbsoluteTime StartTime;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    NSLog(@"%f ============ %f", CFAbsoluteTimeGetCurrent(), [[NSDate date] timeIntervalSinceReferenceDate]);
+    
     CFTimeInterval launchTimeInterval = fabs((CFAbsoluteTimeGetCurrent()-StartTime));
     CFTimeInterval mainlaunchTimeInterval = fabs((CFAbsoluteTimeGetCurrent()-mainStartTime));
     NSLog(@"启动时间 === %f --- %f", launchTimeInterval, mainlaunchTimeInterval);
