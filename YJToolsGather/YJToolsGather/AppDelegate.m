@@ -40,8 +40,8 @@ CFAbsoluteTime StartTime;
     if (launchTimeInterval > launchTimeValue) { // 如果启动时间大于设置
         // Do nothing 你手机配置太低了，买新的吧
     }else{ // 如果启动时间小于设置
-        CFTimeInterval distance = launchTimeValue - launchTimeInterval;
-        [NSThread sleepForTimeInterval:distance];
+//        CFTimeInterval distance = launchTimeValue - launchTimeInterval;
+//        [NSThread sleepForTimeInterval:distance];
     }
     
     NSLog(@"++++++++++");

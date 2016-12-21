@@ -8,8 +8,10 @@
 
 #import "SegmentationViewController.h"
 #import "NSString+YJTools.h"
+#import <StoreKit/StoreKit.h>
 
-@interface SegmentationViewController ()
+
+@interface SegmentationViewController () <SKStoreProductViewControllerDelegate>
 
 @end
 
@@ -57,6 +59,30 @@
     
 
 
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+
+    NSDictionary *appParameters = [NSDictionary dictionaryWithObject:@"1183737380"
+                                                              forKey:SKStoreProductParameterITunesItemIdentifier];
+    
+    SKStoreProductViewController *productViewController = [[SKStoreProductViewController alloc] init];
+    productViewController.delegate = self;
+    [productViewController loadProductWithParameters:appParameters completionBlock:^(BOOL result, NSError *error){
+        NSLog(@"-->%d --Error = %@", result, error);
+        if (result) {
+            [self presentViewController:productViewController animated:YES completion:^{
+            }];
+        }
+    }];
+    
+
+}
+
+#pragma mark - SKStoreProductViewControllerDelegate
+- (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController {
+    [viewController dismissViewControllerAnimated:YES completion:^{
+    }];
 }
 
 
