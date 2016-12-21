@@ -94,6 +94,7 @@
 		63AC99FC1DAE2EE40089278D /* YJMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJMainViewController.h; sourceTree = "<group>"; };
 		63AC99FD1DAE2EE40089278D /* YJMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJMainViewController.m; sourceTree = "<group>"; };
 		63AC99FE1DAE2EE40089278D /* YJMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJMainViewController.xib; sourceTree = "<group>"; };
+		63ADF3971E0A2B6700F0D845 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		63B302091DD86B440059BA96 /* YJSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJSwitch.h; sourceTree = "<group>"; };
 		63B3020A1DD86B440059BA96 /* YJSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJSwitch.m; sourceTree = "<group>"; };
 		63B3020C1DD86C6B0059BA96 /* login_toggle_abc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_toggle_abc@2x.png"; sourceTree = "<group>"; };
@@ -275,6 +276,7 @@
 				63AC99EA1DADFF6A0089278D /* LaunchScreen.storyboard */,
 				63AC99ED1DADFF6A0089278D /* Info.plist */,
 				63AC99DD1DADFF6A0089278D /* main.m */,
+				63ADF3971E0A2B6700F0D845 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -544,10 +546,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 33JZ8ZWGJN;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = YJToolsGather/PrefixHeader.pch;
 				INFOPLIST_FILE = YJToolsGather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.isMonkey.YJDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.houmanager.YJDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -557,10 +561,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 33JZ8ZWGJN;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = YJToolsGather/PrefixHeader.pch;
 				INFOPLIST_FILE = YJToolsGather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.isMonkey.YJDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.houmanager.YJDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
