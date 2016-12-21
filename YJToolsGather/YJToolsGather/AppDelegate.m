@@ -14,9 +14,7 @@ static CGFloat const launchTimeValue = 3.0f;
 extern CFAbsoluteTime mainStartTime;
 CFAbsoluteTime StartTime;
 @interface AppDelegate (){
-
     dispatch_queue_t  _queue;
-
 }
 
 @end
@@ -43,8 +41,6 @@ CFAbsoluteTime StartTime;
 //        CFTimeInterval distance = launchTimeValue - launchTimeInterval;
 //        [NSThread sleepForTimeInterval:distance];
     }
-    
-    NSLog(@"++++++++++");
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
