@@ -39,6 +39,7 @@
     labelInit.text = @"太阳对我眨眼睛鸟儿唱歌给我听我是一个努力干活儿还不粘人的小妖精别问我从哪里来也别问我到哪里去我要摘下最美的花儿献给我的小公举大王叫我来巡山我把人间转一转打起我的鼓敲起我的锣";
     [self.view addSubview:labelInit];
     
+    
     NSArray *colors = [NSArray arrayWithObjects:
                        (id)[[UIColor colorWithWhite:0 alpha:1] CGColor],
                        (id)[[UIColor colorWithWhite:0 alpha:0] CGColor],
