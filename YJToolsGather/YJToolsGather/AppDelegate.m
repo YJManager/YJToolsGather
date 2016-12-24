@@ -14,9 +14,7 @@ static CGFloat const launchTimeValue = 3.0f;
 extern CFAbsoluteTime mainStartTime;
 CFAbsoluteTime StartTime;
 @interface AppDelegate (){
-
     dispatch_queue_t  _queue;
-
 }
 
 @end
@@ -40,11 +38,9 @@ CFAbsoluteTime StartTime;
     if (launchTimeInterval > launchTimeValue) { // 如果启动时间大于设置
         // Do nothing 你手机配置太低了，买新的吧
     }else{ // 如果启动时间小于设置
-        CFTimeInterval distance = launchTimeValue - launchTimeInterval;
-        [NSThread sleepForTimeInterval:distance];
+//        CFTimeInterval distance = launchTimeValue - launchTimeInterval;
+//        [NSThread sleepForTimeInterval:distance];
     }
-    
-    NSLog(@"++++++++++");
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

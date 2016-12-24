@@ -35,6 +35,7 @@
 		63AC99FB1DAE01330089278D /* MonitorMuteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC99FA1DAE01330089278D /* MonitorMuteManager.m */; };
 		63AC99FF1DAE2EE40089278D /* YJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AC99FD1DAE2EE40089278D /* YJMainViewController.m */; };
 		63AC9A001DAE2EE40089278D /* YJMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63AC99FE1DAE2EE40089278D /* YJMainViewController.xib */; };
+		63ADF39A1E0A65A600F0D845 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ADF3991E0A65A600F0D845 /* StoreKit.framework */; };
 		63B3020B1DD86B440059BA96 /* YJSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3020A1DD86B440059BA96 /* YJSwitch.m */; };
 		63B302101DD86C6B0059BA96 /* login_toggle_abc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B3020C1DD86C6B0059BA96 /* login_toggle_abc@2x.png */; };
 		63B302111DD86C6B0059BA96 /* login_toggle_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B3020D1DD86C6B0059BA96 /* login_toggle_bg@2x.png */; };
@@ -94,6 +95,8 @@
 		63AC99FC1DAE2EE40089278D /* YJMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJMainViewController.h; sourceTree = "<group>"; };
 		63AC99FD1DAE2EE40089278D /* YJMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJMainViewController.m; sourceTree = "<group>"; };
 		63AC99FE1DAE2EE40089278D /* YJMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJMainViewController.xib; sourceTree = "<group>"; };
+		63ADF3971E0A2B6700F0D845 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		63ADF3991E0A65A600F0D845 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		63B302091DD86B440059BA96 /* YJSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJSwitch.h; sourceTree = "<group>"; };
 		63B3020A1DD86B440059BA96 /* YJSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJSwitch.m; sourceTree = "<group>"; };
 		63B3020C1DD86C6B0059BA96 /* login_toggle_abc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_toggle_abc@2x.png"; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63ADF39A1E0A65A600F0D845 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +228,7 @@
 			children = (
 				63AC99DB1DADFF6A0089278D /* YJToolsGather */,
 				63AC99DA1DADFF6A0089278D /* Products */,
+				63ADF3981E0A65A600F0D845 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -275,6 +280,7 @@
 				63AC99EA1DADFF6A0089278D /* LaunchScreen.storyboard */,
 				63AC99ED1DADFF6A0089278D /* Info.plist */,
 				63AC99DD1DADFF6A0089278D /* main.m */,
+				63ADF3971E0A2B6700F0D845 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -287,6 +293,14 @@
 				63AC99FA1DAE01330089278D /* MonitorMuteManager.m */,
 			);
 			path = MonitorMuteManager;
+			sourceTree = "<group>";
+		};
+		63ADF3981E0A65A600F0D845 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63ADF3991E0A65A600F0D845 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		63B302081DD86B120059BA96 /* YJViews */ = {
@@ -545,6 +559,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 33JZ8ZWGJN;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = YJToolsGather/PrefixHeader.pch;
 				INFOPLIST_FILE = YJToolsGather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -559,6 +575,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 33JZ8ZWGJN;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = YJToolsGather/PrefixHeader.pch;
 				INFOPLIST_FILE = YJToolsGather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
