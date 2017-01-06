@@ -23,4 +23,7 @@
 
 - (void)detectMuteSwitch;
 
+/** 电池电量 */
+- (CGFloat)getBatteryQuantity;
+
 @end

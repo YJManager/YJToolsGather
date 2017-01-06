@@ -198,7 +198,12 @@
 #pragma mark - MonitorMuteManagerDelegate
 - (void)volumeModeMuted:(BOOL)muted{
     NSString * mutedMessage = muted?@"静音":@"响亮";
-    self.muteModelLabel.text = mutedMessage;
+    
+    CGFloat batteryQuantity = [[MonitorMuteManager sharedInstance] getBatteryQuantity] * 100;
+    
+    NSString *leftNavMessage = [NSString stringWithFormat:@"%@ 电量%.f%@", mutedMessage, batteryQuantity, @"%"];
+    
+    self.muteModelLabel.text = leftNavMessage;
 }
 
 #pragma mark - Lazy
