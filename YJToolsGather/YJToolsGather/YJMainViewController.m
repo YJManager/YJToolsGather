@@ -217,6 +217,12 @@
     }
     return _muteModelLabel;
 }
+    
+/**
+     NSString *clientVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString*)kCFBundleVersionKey];
+ NSString *clientVersion =
+ [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+ */
 
 
 @end
