@@ -77,4 +77,13 @@ static void soundCompletionCallback (SystemSoundID mySSID, void* myself) {
     _soundDuration = 0.0;
 }
 
+- (CGFloat)getBatteryQuantity {
+    [UIDevice currentDevice].batteryMonitoringEnabled = YES;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [UIDevice currentDevice].batteryMonitoringEnabled = NO;
+    });
+    return [[UIDevice currentDevice] batteryLevel];
+}
+
+
 @end
