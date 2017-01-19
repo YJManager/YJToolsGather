@@ -77,6 +77,7 @@
 		6368A3781DE735560004F799 /* ShowToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowToastViewController.m; sourceTree = "<group>"; };
 		6368A37A1DE737170004F799 /* UIView+ShowToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ShowToast.h"; sourceTree = "<group>"; };
 		6368A37B1DE737170004F799 /* UIView+ShowToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ShowToast.m"; sourceTree = "<group>"; };
+		637CB0B91E30A4870080FF4A /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		63825ACA1DF6A45400047DEC /* SendEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendEmailViewController.h; sourceTree = "<group>"; };
 		63825ACB1DF6A45400047DEC /* SendEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendEmailViewController.m; sourceTree = "<group>"; };
 		63825ACD1DF6BD2600047DEC /* YJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJNavigationController.h; sourceTree = "<group>"; };
@@ -205,6 +206,22 @@
 			path = YJToastView;
 			sourceTree = "<group>";
 		};
+		637CB0B71E30A4870080FF4A /* OldMethord */ = {
+			isa = PBXGroup;
+			children = (
+				637CB0B81E30A4870080FF4A /* SynthesizeSingleton */,
+			);
+			path = OldMethord;
+			sourceTree = "<group>";
+		};
+		637CB0B81E30A4870080FF4A /* SynthesizeSingleton */ = {
+			isa = PBXGroup;
+			children = (
+				637CB0B91E30A4870080FF4A /* SynthesizeSingleton.h */,
+			);
+			path = SynthesizeSingleton;
+			sourceTree = "<group>";
+		};
 		63825AC81DF6A43100047DEC /* SubViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +260,7 @@
 		63AC99DB1DADFF6A0089278D /* YJToolsGather */ = {
 			isa = PBXGroup;
 			children = (
+				637CB0B71E30A4870080FF4A /* OldMethord */,
 				63825AC81DF6A43100047DEC /* SubViewController */,
 				6368A3701DE727790004F799 /* YJToastView */,
 				6322B9C11DE0A1190033554E /* YaoYiYao */,
