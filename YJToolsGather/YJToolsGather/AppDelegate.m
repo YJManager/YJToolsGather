@@ -41,7 +41,6 @@ CFAbsoluteTime StartTime;
 //        CFTimeInterval distance = launchTimeValue - launchTimeInterval;
 //        [NSThread sleepForTimeInterval:distance];
     }
-
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
