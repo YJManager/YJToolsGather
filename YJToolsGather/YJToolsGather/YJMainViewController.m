@@ -60,6 +60,8 @@
     self.dataSource = [NSMutableArray arrayWithArray:dataSource];
     
     [MonitorMuteManager sharedInstance].delegate = self;
+    
+    [self performSelectorOnMainThread:nil withObject:nil waitUntilDone:YES];
 }
 
 #pragma mark - tableViewDataSource
