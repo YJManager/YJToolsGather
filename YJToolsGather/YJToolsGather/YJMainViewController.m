@@ -18,6 +18,7 @@
 #import "ShowToastViewController.h"
 #import "SendEmailViewController.h"
 #import "PinYinViewController.h"
+#import "CMStepCounterViewController.h"
 
 @interface YJMainViewController () <UITableViewDataSource, UITableViewDelegate, MonitorMuteManagerDelegate, MFMessageComposeViewControllerDelegate>
 
@@ -54,14 +55,14 @@
                              @"摇一摇",
                              @"Toast",
                              @"发邮件和只能输入规定字符",
-                             @"拼音"
+                             @"拼音",
+                             @"M7协处理器计步器"
                              ];
     
     self.dataSource = [NSMutableArray arrayWithArray:dataSource];
     
     [MonitorMuteManager sharedInstance].delegate = self;
     
-    [self performSelectorOnMainThread:nil withObject:nil waitUntilDone:YES];
 }
 
 #pragma mark - tableViewDataSource
@@ -117,6 +118,9 @@
         pushVc = showToastVc;
     }else if (indexPath.row == 9){
         PinYinViewController * showToastVc = [[PinYinViewController alloc] init];
+        pushVc = showToastVc;
+    }else if (indexPath.row == 10){
+        CMStepCounterViewController * showToastVc = [[CMStepCounterViewController alloc] init];
         pushVc = showToastVc;
     }
     if (pushVc) {

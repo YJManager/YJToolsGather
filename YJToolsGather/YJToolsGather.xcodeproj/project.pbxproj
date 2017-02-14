@@ -44,6 +44,7 @@
 		63B302161DD86CC00059BA96 /* UIImage+YJTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B302151DD86CC00059BA96 /* UIImage+YJTools.m */; };
 		63D6BE751DF7E25B000279E9 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = 63D6BE731DF7E25B000279E9 /* pinyin.c */; };
 		63D6BE781DF7E26B000279E9 /* PinYinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D6BE771DF7E26B000279E9 /* PinYinViewController.m */; };
+		63FD51881E52A98A00105CD4 /* CMStepCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FD51871E52A98A00105CD4 /* CMStepCounterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,8 @@
 		63D6BE741DF7E25B000279E9 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
 		63D6BE761DF7E26B000279E9 /* PinYinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYinViewController.h; sourceTree = "<group>"; };
 		63D6BE771DF7E26B000279E9 /* PinYinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinYinViewController.m; sourceTree = "<group>"; };
+		63FD51861E52A98A00105CD4 /* CMStepCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMStepCounterViewController.h; sourceTree = "<group>"; };
+		63FD51871E52A98A00105CD4 /* CMStepCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMStepCounterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +263,7 @@
 		63AC99DB1DADFF6A0089278D /* YJToolsGather */ = {
 			isa = PBXGroup;
 			children = (
+				63FD51851E52A97200105CD4 /* YJStepCounter */,
 				637CB0B71E30A4870080FF4A /* OldMethord */,
 				63825AC81DF6A43100047DEC /* SubViewController */,
 				6368A3701DE727790004F799 /* YJToastView */,
@@ -351,6 +355,15 @@
 				63D6BE741DF7E25B000279E9 /* pinyin.h */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		63FD51851E52A97200105CD4 /* YJStepCounter */ = {
+			isa = PBXGroup;
+			children = (
+				63FD51861E52A98A00105CD4 /* CMStepCounterViewController.h */,
+				63FD51871E52A98A00105CD4 /* CMStepCounterViewController.m */,
+			);
+			path = YJStepCounter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +459,7 @@
 				6322B9C41DE0A1320033554E /* YaoYiYaoViewController.m in Sources */,
 				63668EDD1DB87432003646E2 /* ConvertTypeViewController.m in Sources */,
 				63AC99FF1DAE2EE40089278D /* YJMainViewController.m in Sources */,
+				63FD51881E52A98A00105CD4 /* CMStepCounterViewController.m in Sources */,
 				6317C6BE1DDEF5C00020D14B /* RuntimeViewController.m in Sources */,
 				63B3020B1DD86B440059BA96 /* YJSwitch.m in Sources */,
 				63D6BE751DF7E25B000279E9 /* pinyin.c in Sources */,
