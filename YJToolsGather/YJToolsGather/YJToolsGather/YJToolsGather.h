@@ -11,10 +11,10 @@
 
 #ifdef __OBJC__
 
-    /** 基本配置 */
+    /** 1.基本配置 */
     #import "YJConfigure.h"
 
-    /** 单例 */
+    /** 2.单例 */
     #import "YJSingleton.h"
 
 #endif

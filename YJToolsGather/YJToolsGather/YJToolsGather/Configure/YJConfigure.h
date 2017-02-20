@@ -9,7 +9,7 @@
 #ifndef YJConfigure_h
 #define YJConfigure_h
 
-/** 1.自定义打印log */
+/** 1.自定义打印log 行数+信息*/
 #ifdef DEBUG
     #define YJLog(...) NSLog(@"%3d %@", __LINE__, [NSString stringWithFormat:__VA_ARGS__])
 #else
@@ -17,9 +17,11 @@
 #endif
 
 /** 2. 屏幕宽高及frame KEY_WINDOW */
-#define SCREEN_FRAME [UIScreen mainScreen].bounds
-#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
-#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
-#define KEY_WINDOW [UIApplication sharedApplication].keyWindow
+#define kSCREEN_FRAME [UIScreen mainScreen].bounds
+#define kSCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define kSCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define kKEY_WINDOW [UIApplication sharedApplication].keyWindow
+
+/** 3. */
 
 #endif /* YJConfigure_h */

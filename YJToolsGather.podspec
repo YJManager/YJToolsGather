@@ -1,4 +1,4 @@
-version = "0.0.2";
+version = "0.0.3";
 
 Pod::Spec.new do |s|
     s.name         = "YJToolsGather"
@@ -12,16 +12,28 @@ Pod::Spec.new do |s|
     s.license      = { :type => "MIT", :file => "LICENSE" }
 
     s.author       = { "houmanager" => "houmanager@Hotmail.com" }
-    s.platform     = :ios, "8.0"
+    s.platform              = :ios, "8.0"
     s.ios.deployment_target = "8.0"
     s.requires_arc = true
-    s.frameworks = 'Foundation', 'UIKit'
+    s.ios.frameworks = 'Foundation', 'UIKit'
     #s.library       = 'resolv.9'
     #s.libraries     = "libresolv.9.tbd"
-    s.source         = { :git => "https://github.com/YJManager/YJToolsGather.git", :tag => "#{version}" }
-    s.source_files = "YJToolsGather/YJToolsGather/YJToolsGather",
+
+    s.source         = { :git => "https://github.com/YJManager/YJToolsGather.git", :tag => "#{version}", :submodules => true }
+    s.public_header_files = 'YJToolsGather/YJToolsGather/YJToolsGather/YJToolsGather.h'
+    s.source_files        = 'YJToolsGather/YJToolsGather/YJToolsGather/YJToolsGather.h'
+
+    #s.source_files = "YJToolsGather/YJToolsGather/YJToolsGather",
                      "YJToolsGather/YJToolsGather/YJToolsGather/Configure",
                      "YJToolsGather/YJToolsGather/YJToolsGather/*.{h}",
                       "YJToolsGather/YJToolsGather/YJToolsGather/**/*.{h,m}"
     #s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+
+# 基本配置模块
+    s.subspec 'Configure' do |ss|
+        ss.source_files = 'YJToolsGather/YJToolsGather/YJToolsGather/Configure/*.{h,m}'
+        ss.public_header_files = 'YJToolsGather/YJToolsGather/YJToolsGather/Configure/*.{h}'
+    end
+
+
 end
