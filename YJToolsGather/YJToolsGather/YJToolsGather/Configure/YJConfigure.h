@@ -22,6 +22,10 @@
 #define kSCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define kKEY_WINDOW [UIApplication sharedApplication].keyWindow
 
-/** 3. */
+/** 3. 版本号 */
+#define kAPP_CURRENT_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] // APP 版本
+#define kAPP_BUILD_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]              // APP 编译版本
+
+/** 4.  */
 
 #endif /* YJConfigure_h */
