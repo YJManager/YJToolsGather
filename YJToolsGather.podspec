@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
     s.version      = version
     s.summary      = "YJToolsGather, a collection of useful Objective-C Tool Frameworks"
     s.description      = <<-DESC
-                          YJToolsGather 是Objective-C常用开发工具。
+                          YJToolsGather 是Objective-C常用开发工具. a collection of useful Objective-C Tool Frameworks.
                            DESC
     s.homepage     = "https://github.com/YJManager/YJToolsGather.git"
 
