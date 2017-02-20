@@ -29,5 +29,4 @@ Pod::Spec.new do |s|
         ss.public_header_files = 'YJToolsGather/YJToolsGather/YJToolsGather/Configure/*.{h}'
     end
 
-
 end
