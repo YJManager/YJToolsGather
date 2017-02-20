@@ -28,6 +28,8 @@
 		63C8AAB91E5A86C5005DDAFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63C8AAC21E5A87AA005DDAFD /* YJToolsGather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJToolsGather.h; sourceTree = "<group>"; };
 		63C8AAC31E5A87CD005DDAFD /* YJConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJConfigure.h; sourceTree = "<group>"; };
+		63C8AAC41E5A9B9D005DDAFD /* YJSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJSingleton.h; sourceTree = "<group>"; };
+		63C8AAC51E5A9BCF005DDAFD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				63C8AAB61E5A86C5005DDAFD /* LaunchScreen.storyboard */,
 				63C8AAB91E5A86C5005DDAFD /* Info.plist */,
 				63C8AAA91E5A86C5005DDAFD /* main.m */,
+				63C8AAC51E5A9BCF005DDAFD /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -95,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				63C8AAC31E5A87CD005DDAFD /* YJConfigure.h */,
+				63C8AAC41E5A9B9D005DDAFD /* YJSingleton.h */,
 			);
 			path = Configure;
 			sourceTree = "<group>";
@@ -292,6 +296,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 33JZ8ZWGJN;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = YJToolsGather/PrefixHeader.pch;
 				INFOPLIST_FILE = YJToolsGather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -305,6 +311,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 33JZ8ZWGJN;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = YJToolsGather/PrefixHeader.pch;
 				INFOPLIST_FILE = YJToolsGather/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -332,6 +340,7 @@
 				63C8AABE1E5A86C5005DDAFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

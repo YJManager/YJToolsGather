@@ -9,5 +9,15 @@
 #ifndef YJToolsGather_h
 #define YJToolsGather_h
 
+#ifdef __OBJC__
+
+    /** 基本配置 */
+    #import "YJConfigure.h"
+
+    /** 单例 */
+    #import "YJSingleton.h"
+
+#endif
+
 
 #endif /* YJToolsGather_h */
