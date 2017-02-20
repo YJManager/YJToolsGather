@@ -23,12 +23,6 @@ Pod::Spec.new do |s|
     s.public_header_files = 'YJToolsGather/YJToolsGather/YJToolsGather/YJToolsGather.h'
     s.source_files        = 'YJToolsGather/YJToolsGather/YJToolsGather/YJToolsGather.h'
 
-    #s.source_files = "YJToolsGather/YJToolsGather/YJToolsGather",
-                     "YJToolsGather/YJToolsGather/YJToolsGather/Configure",
-                     "YJToolsGather/YJToolsGather/YJToolsGather/*.{h}",
-                      "YJToolsGather/YJToolsGather/YJToolsGather/**/*.{h,m}"
-    #s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-
 # 基本配置模块
     s.subspec 'Configure' do |ss|
         ss.source_files = 'YJToolsGather/YJToolsGather/YJToolsGather/Configure/*.{h,m}'
