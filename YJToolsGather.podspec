@@ -19,6 +19,9 @@ Pod::Spec.new do |s|
     #s.library       = 'resolv.9'
     #s.libraries     = "libresolv.9.tbd"
     s.source         = { :git => "https://github.com/YJManager/YJToolsGather.git", :tag => "#{version}" }
-    s.source_files = "YJToolsGather/YJToolsGather/YJToolsGather", "YJToolsGather/YJToolsGather/YJToolsGather/*.{h}", "YJToolsGather/YJToolsGather/YJToolsGather/**/*.{h,m}"
+    s.source_files = "YJToolsGather/YJToolsGather/YJToolsGather",
+                     "YJToolsGather/YJToolsGather/YJToolsGather/Configure",
+                     "YJToolsGather/YJToolsGather/YJToolsGather/*.{h}",
+                      "YJToolsGather/YJToolsGather/YJToolsGather/**/*.{h,m}"
     #s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 end

@@ -4,7 +4,7 @@
 //
 //  Created by YJHou on 2017/2/20.
 //  Copyright © 2017年 Houmanager. All rights reserved.
-//
+//  工程的基本配置：包括日志打印、屏幕尺寸等配置
 
 #ifndef YJConfigure_h
 #define YJConfigure_h
