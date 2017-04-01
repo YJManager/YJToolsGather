@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "ControllerManager.h"
 
 @interface ViewController ()
+
+@property (nonatomic, assign) BOOL isEnable; /**< keyong */
 
 @end
 
@@ -19,6 +22,17 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    self.isEnable = !self.isEnable;
+    
+    if (self.isEnable) {
+        [ControllerManager graduallySetBrightness:0.7];
+    }else{
+        [ControllerManager graduallyResumeBrightness];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

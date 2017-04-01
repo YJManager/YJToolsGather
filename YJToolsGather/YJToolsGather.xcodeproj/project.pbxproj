@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6372426D1E8F87D40014BE40 /* ControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6372426C1E8F87D40014BE40 /* ControllerManager.m */; };
 		63C8AAAA1E5A86C5005DDAFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C8AAA91E5A86C5005DDAFD /* main.m */; };
 		63C8AAAD1E5A86C5005DDAFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C8AAAC1E5A86C5005DDAFD /* AppDelegate.m */; };
 		63C8AAB01E5A86C5005DDAFD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C8AAAF1E5A86C5005DDAFD /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6372426B1E8F87D40014BE40 /* ControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerManager.h; sourceTree = "<group>"; };
+		6372426C1E8F87D40014BE40 /* ControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerManager.m; sourceTree = "<group>"; };
 		63C8AAA51E5A86C5005DDAFD /* YJToolsGather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJToolsGather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C8AAA91E5A86C5005DDAFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63C8AAAB1E5A86C5005DDAFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6372426A1E8F87850014BE40 /* ControllerManager */ = {
+			isa = PBXGroup;
+			children = (
+				6372426B1E8F87D40014BE40 /* ControllerManager.h */,
+				6372426C1E8F87D40014BE40 /* ControllerManager.m */,
+			);
+			path = ControllerManager;
+			sourceTree = "<group>";
+		};
 		63C8AA9C1E5A86C5005DDAFD = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +100,7 @@
 		63C8AABF1E5A870D005DDAFD /* YJToolsGather */ = {
 			isa = PBXGroup;
 			children = (
+				6372426A1E8F87850014BE40 /* ControllerManager */,
 				63C8AAC21E5A87AA005DDAFD /* YJToolsGather.h */,
 				63C8AAC01E5A8752005DDAFD /* Configure */,
 			);
@@ -176,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C8AAB01E5A86C5005DDAFD /* ViewController.m in Sources */,
+				6372426D1E8F87D40014BE40 /* ControllerManager.m in Sources */,
 				63C8AAAD1E5A86C5005DDAFD /* AppDelegate.m in Sources */,
 				63C8AAAA1E5A86C5005DDAFD /* main.m in Sources */,
 			);
