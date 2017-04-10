@@ -34,5 +34,19 @@
 //数组是否为空
 #define IsArrEmpty(_ref)    (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) ||([(_ref) count] == 0))
 
+//线程执行方法
+#define Foreground_Begin  dispatch_async(dispatch_get_main_queue(), ^{
+#define Foreground_End    });
+
+#define Background_Begin  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{\
+@autoreleasepool {
+#define Background_End          }\
+});
+
+
+// 特殊字符  @"[`~!@#$%^&*()+=|{}':;',\\[\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]"
+// 12位纯数字 ^\\d{12}$
+// 禁止1开头的11位数字 ^1\\d{10}$
+
 
 #endif /* YJConfigure_h */

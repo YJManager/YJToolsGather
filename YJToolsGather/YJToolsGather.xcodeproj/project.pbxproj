@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		632C8E9B1E9B372F00724311 /* AutoBuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoBuild.h; sourceTree = "<group>"; };
 		6372426B1E8F87D40014BE40 /* ControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerManager.h; sourceTree = "<group>"; };
 		6372426C1E8F87D40014BE40 /* ControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerManager.m; sourceTree = "<group>"; };
 		63C8AAA51E5A86C5005DDAFD /* YJToolsGather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJToolsGather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +111,7 @@
 		63C8AAC01E5A8752005DDAFD /* Configure */ = {
 			isa = PBXGroup;
 			children = (
+				632C8E9B1E9B372F00724311 /* AutoBuild.h */,
 				63C8AAC31E5A87CD005DDAFD /* YJConfigure.h */,
 				63C8AAC41E5A9B9D005DDAFD /* YJSingleton.h */,
 			);
