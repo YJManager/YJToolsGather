@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		631383841ED9686000AF435B /* YJBlockBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 631383811ED9686000AF435B /* YJBlockBarButtonItem.m */; };
+		631383851ED9686000AF435B /* YJBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 631383831ED9686000AF435B /* YJBlockButton.m */; };
 		6372426D1E8F87D40014BE40 /* ControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6372426C1E8F87D40014BE40 /* ControllerManager.m */; };
 		63C8AAAA1E5A86C5005DDAFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C8AAA91E5A86C5005DDAFD /* main.m */; };
 		63C8AAAD1E5A86C5005DDAFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C8AAAC1E5A86C5005DDAFD /* AppDelegate.m */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		631383801ED9686000AF435B /* YJBlockBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJBlockBarButtonItem.h; sourceTree = "<group>"; };
+		631383811ED9686000AF435B /* YJBlockBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJBlockBarButtonItem.m; sourceTree = "<group>"; };
+		631383821ED9686000AF435B /* YJBlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJBlockButton.h; sourceTree = "<group>"; };
+		631383831ED9686000AF435B /* YJBlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJBlockButton.m; sourceTree = "<group>"; };
 		632C8E9B1E9B372F00724311 /* AutoBuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoBuild.h; sourceTree = "<group>"; };
 		6372426B1E8F87D40014BE40 /* ControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerManager.h; sourceTree = "<group>"; };
 		6372426C1E8F87D40014BE40 /* ControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerManager.m; sourceTree = "<group>"; };
@@ -53,6 +59,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		631383791ED966E200AF435B /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				631383801ED9686000AF435B /* YJBlockBarButtonItem.h */,
+				631383811ED9686000AF435B /* YJBlockBarButtonItem.m */,
+				631383821ED9686000AF435B /* YJBlockButton.h */,
+				631383831ED9686000AF435B /* YJBlockButton.m */,
+			);
+			path = Blocks;
+			sourceTree = "<group>";
+		};
 		6372426A1E8F87850014BE40 /* ControllerManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +124,7 @@
 		63C8AABF1E5A870D005DDAFD /* YJToolsGather */ = {
 			isa = PBXGroup;
 			children = (
+				631383791ED966E200AF435B /* Blocks */,
 				63E07D8E1EA0D3E900EB8F3F /* CustomTabBar */,
 				6372426A1E8F87850014BE40 /* ControllerManager */,
 				63C8AAC21E5A87AA005DDAFD /* YJToolsGather.h */,
@@ -209,8 +227,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C8AAB01E5A86C5005DDAFD /* ViewController.m in Sources */,
+				631383841ED9686000AF435B /* YJBlockBarButtonItem.m in Sources */,
 				63E07D941EA0D4DC00EB8F3F /* TabBarButton.m in Sources */,
 				6372426D1E8F87D40014BE40 /* ControllerManager.m in Sources */,
+				631383851ED9686000AF435B /* YJBlockButton.m in Sources */,
 				63C8AAAD1E5A86C5005DDAFD /* AppDelegate.m in Sources */,
 				63E07D911EA0D3E900EB8F3F /* CustomTabBar.m in Sources */,
 				63C8AAAA1E5A86C5005DDAFD /* main.m in Sources */,
